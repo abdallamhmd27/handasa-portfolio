@@ -23,6 +23,15 @@ const caseStudies = [
   {id:"stech", cat:["leads"], num:"WA", en:{name:"STech", label:"Awareness · WhatsApp leads", desc:"Built product awareness and generated fast consultation leads through Spark and dark ads."}, ar:{name:"STech", label:"وعي · عملاء واتساب", desc:"بنينا الوعي بالمنتج وحققنا عملاء استشارات بسرعة باستخدام Spark وDark Ads."}, href:"https://www.instagram.com/p/DUXtm_UDCcF/"},
 ];
 
+const rabhaReels = [
+  {id:"2252826048836354", views:"47K", image:"/rabha/reel-47k.jpg"},
+  {id:"921005460270732", views:"18K", image:"/rabha/reel-18k.jpg"},
+  {id:"1487970329748086", views:"13K", image:"/rabha/reel-13k.jpg"},
+  {id:"1342410861035210", views:"6.4K", image:"/rabha/reel-64k.jpg"},
+  {id:"1517874099958400", views:"6K", image:"/rabha/reel-6k.jpg"},
+  {id:"1306608900933541", views:"3.1K", image:"/rabha/reel-31k.jpg"},
+];
+
 export default function Home(){
   const [lang,setLang]=useState<Lang>("en"); const [filter,setFilter]=useState<Filter>("all"); const t=ui[lang]; const rtl=lang==="ar";
   const visible=caseStudies.filter(c=>filter==="all"||c.cat.includes(filter));
@@ -39,6 +48,7 @@ export default function Home(){
         <article><small>02 / {rtl?"الاستراتيجية":"STRATEGY"}</small><h3>{rtl?"Funnel يتطور مع استجابة السوق.":"A funnel shaped by market response."}</h3><p>{rtl?"حددت الجمهور ومشكلاته، وبنيت مسارًا بدأ بالوعي ثم الثقة ثم البيع. اختبرت فورمات مختلفة وطورتها حسب ما جذب العملاء، واقترحت عرض البدء بكميات صغيرة لتقليل مخاطرة التاجر.":"I defined the audience and its problems, then built a funnel from awareness to trust to sales. Formats evolved with response, alongside a small-quantity offer designed to reduce the trader’s risk."}</p></article>
         <article><small>03 / {rtl?"دوري":"MY ROLE"}</small><h3>{rtl?"استراتيجية، كتابة، اتجاه محتوى، وتصوير بسيط.":"Strategy, writing, content direction, and simple shooting."}</h3><p>{rtl?"بنيت استراتيجية المحتوى والأفكار والفورمات، كتبت السكريبتات، حددت طريقة التنفيذ، وضبطت الإضاءة والكادر وصورت المحتوى. نفذ المونتاج محرر فيديو، ونفذ الهوية مصمم براندينج.":"I built the content strategy, formats, ideas and scripts, set the execution direction, and handled the lighting, framing and shooting. Editing and brand design were delivered by specialist collaborators."}</p></article>
       </div>
+      <div className="reelShowcase"><div className="reelShowcaseHead"><p>{rtl?"أفضل الفيديوهات أداءً":"TOP-PERFORMING VIDEOS"}</p><span>{rtl?"اضغط على أي صورة لمشاهدة الفيديو على فيسبوك":"SELECT A COVER TO WATCH ON FACEBOOK"}</span></div><div className="reelGrid">{rabhaReels.map((reel,i)=><a href={`https://www.facebook.com/reel/${reel.id}/`} target="_blank" rel="noreferrer" key={reel.id} className="reelCard"><img src={reel.image} alt={rtl?`غلاف فيديو رابحة بعدد ${reel.views} مشاهدة`:`Rabha reel cover with ${reel.views} views`}/><div><small>0{i+1}</small><b>{reel.views}</b><span>{rtl?"مشاهدة":"VIEWS"}</span><i>↗</i></div></a>)}</div></div>
       <div className="formatStrip"><p>{rtl?"الفورمات التي تم اختبارها":"FORMATS TESTED"}</p>{(rtl?["مشكلة وحل","داخل المصنع","مراحل التصنيع","عرض بيعي","تفاصيل المنتج","رسائل ثقة"]:["Problem / solution","Inside the factory","Making process","Sales offer","Product detail","Trust building"]).map(x=><span key={x}>{x}</span>)}</div>
       <a className="rabhaLink" href="https://www.facebook.com/people/Rabha/61588290807233/?sk=reels_tab" target="_blank" rel="noreferrer">{rtl?"شاهد الـ41 فيديو على فيسبوك":"VIEW ALL 41 VIDEOS ON FACEBOOK"}<span>↗</span></a>
     </section>
