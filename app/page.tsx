@@ -33,7 +33,7 @@ const rabhaReels = [
 ];
 
 const mariemReels = [
-  {id:"852477507840942", views:"2M", image:"/mariem/reel-2m.jpg", en:"Organic storytelling", ar:"سرد قصصي أورجانيك"},
+  {id:"852477507840942", views:"2M", image:"/mariem/reel-2m-new.jpg", en:"Organic storytelling", ar:"سرد قصصي أورجانيك"},
   {id:"1150334803884934", views:"155K", image:"/mariem/reel-155k.jpg", en:"Paid sales creative", ar:"محتوى بيعي للإعلانات"},
   {id:"4373980182748647", views:"149K", image:"/mariem/reel-149k.jpg", en:"Offer-led ad", ar:"عرض بيعي للإعلانات"},
   {id:"2127511864456822", views:"78K", image:"/mariem/reel-78k.jpg", en:"Ad script", ar:"سكريبت إعلاني"},
