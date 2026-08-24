@@ -153,7 +153,13 @@
 .mariemCase{position:relative;z-index:4;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -26px 65px rgba(0,0,0,.16)}
 .morehCase{position:relative;z-index:5;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -26px 65px rgba(0,0,0,.18)}
 .approachSection{position:relative;z-index:6;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;background:#10100f}
-.aboutSection{position:relative;z-index:7;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -26px 65px rgba(0,0,0,.14)}
+.aboutSection{position:relative;z-index:7;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -26px 65px rgba(0,0,0,.14);background:#0d0d0c;color:#f3f1ec}
+.aboutSection .sectionIndex{color:#aaa;border-color:rgba(255,255,255,.18)}
+.aboutText>small,.abilities b{color:#d8a4b4}
+.aboutText h2{color:#fff}
+.aboutText>p{color:#c9c5bf}
+.abilities{border-color:rgba(255,255,255,.22)}
+.abilities span{color:#f3f1ec;border-color:rgba(255,255,255,.18)}
 .finalCta{position:relative;z-index:8;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0}
 
 @supports (animation-timeline:view()){
