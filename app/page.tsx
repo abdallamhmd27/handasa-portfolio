@@ -36,7 +36,7 @@ const proofSources = [
   { brand:"Tallah Dental", base:"https://www.instagram.com/tallah.dentalclinic/reel/", ids:["DRCc2gYgNAu","DQ4q-qqjG9y","DQzVVV9jDVF","DQPaTIwjCbE"] },
   { brand:"First Axes", base:"https://www.instagram.com/first.axes/reel/", ids:["DYhLV5XIr8k","DYCb2TMIZDx","DXUR4SwjCsw","DXMdNdbCEAL","DXJ4y-ZgdNB","DXJdGELEm_4","DWd8eKVCBxZ","DWEuUEECCk-","DVYoid5ACfE"] },
   { brand:"EBT", base:"https://www.instagram.com/ebt.sa/reel/", ids:["CwNDF78s9f2","Cz83tbyIQ5Q","DYE-8ZxIPW9","DX_8RdnI7wi","DU0cmt5iIDu","DUbssJeCDNR","DUYSumACPu7","DUVDSCbCM7K","DUE_E3diIKz"] },
-  { brand:"Khyoot", base:"https://www.instagram.com/khyoot.official/reel/", ids:["Dcbd8sQqKy4","DcWGIT1oM7F","DcRP_7wlJcw","DcOdenDIxQX","Dbi5Q_yErxc","DbQntsPAKlM","DbLeoIKmxIj","DbI_GAWjlS5","DbGSVXQgt6q"] },
+  { brand:"Khyoot", base:"https://www.instagram.com/khyoot.official/reel/", ids:["Dcbd8sQqKy4","DcRP_7wlJcw","DcOdenDIxQX","Dbi5Q_yErxc","DbQntsPAKlM","DbLeoIKmxIj","DbI_GAWjlS5","DbGSVXQgt6q"] },
   { brand:"Selected work", base:"https://www.instagram.com/reel/", ids:["DVmMc0vDO6H","DVq7_oajNWS","DWCYoBBDDz_","DWy7T-QMi0x","DWe0R-CsrPH","DWR6Mb7sDgU","DXKYMTxttJL","DXuT935DI-y","DXrk3UVMSE1"] },
 ];
 
