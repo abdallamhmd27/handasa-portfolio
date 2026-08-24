@@ -177,7 +177,26 @@
 
 @media(max-width:800px){
   :root{--radius-xl:30px;--radius-lg:22px;--radius-md:16px}
+  /* iOS Safari can blank the page when a scroll-driven 3D transform is
+     applied to a full-viewport section. Keep the book-turn on larger screens
+     and use the same rounded overlap without 3D compositing on phones. */
+  .site{overflow-x:hidden;overflow-y:visible}
+  .heroFlipStage{perspective:none;transform-style:flat}
+  .cinematicHero{
+    animation:none!important;
+    transform:none!important;
+    filter:none!important;
+    opacity:1!important;
+    backface-visibility:visible;
+  }
   .proofWall{margin-top:-24px;padding-top:104px}
+  .motionViewport{
+    mask-image:none;
+    -webkit-mask-image:none;
+  }
+  .motionTrack{will-change:auto}
+  .proofTile img{filter:none}
+  .reelCard b{backdrop-filter:none;-webkit-backdrop-filter:none}
   .approvedConcept{padding:26px}
   .caseStory,.mariemStory,.morehStory{gap:9px}
   .mariemCase,.morehCase,.approachSection,.aboutSection,.finalCta{margin-top:-20px}
