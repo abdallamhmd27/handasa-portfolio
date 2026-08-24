@@ -157,7 +157,7 @@
 .aboutSection .sectionIndex{color:#aaa;border-color:rgba(255,255,255,.18)}
 .aboutText>small,.abilities b{color:#d8a4b4}
 .aboutText h2{color:#fff}
-.aboutText>p{color:#c9c5bf}
+.aboutText>p{color:var(--cream)}
 .abilities{border-color:rgba(255,255,255,.22)}
 .abilities span{color:#f3f1ec;border-color:rgba(255,255,255,.18)}
 .finalCta{position:relative;z-index:8;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0}
