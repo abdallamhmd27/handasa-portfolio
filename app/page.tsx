@@ -30,36 +30,30 @@ const mariemReels = [
   {id:"809876478729148", views:"42K", image:"/mariem/reel-42k.jpg", en:"Learning test", ar:"تجربة للتعلّم"},
 ];
 
-const proofRows = [
-  [
-    {image:"/mariem/reel-2m-new.jpg", href:"https://www.facebook.com/reel/852477507840942/", alt:"Mariem Hijab storytelling reel"},
-    {image:"/rabha/reel-47k.jpg", href:"https://www.facebook.com/reel/2252826048836354/", alt:"Rabha organic reel"},
-    {image:"/mariem/reel-155k.jpg", href:"https://www.facebook.com/reel/1150334803884934/", alt:"Mariem Hijab sales creative"},
-    {image:"/moreh/creative-hijabi.jpg", href:"https://www.instagram.com/p/DV3oF1xtDp5/?hl=en", alt:"Moreh medical wear creative"},
-    {image:"/rabha/reel-18k.jpg", href:"https://www.facebook.com/reel/921005460270732/", alt:"Rabha product reel"},
-  ],
-  [
-    {image:"/mariem/reel-149k.jpg", href:"https://www.facebook.com/reel/4373980182748647/", alt:"Mariem Hijab offer creative"},
-    {image:"/rabha/reel-13k.jpg", href:"https://www.facebook.com/reel/1487970329748086/", alt:"Rabha factory reel"},
-    {image:"/moreh/creative-shift.jpg", href:"https://www.instagram.com/p/DVGa61jDeK4/?hl=en", alt:"Moreh long shift creative"},
-    {image:"/mariem/reel-78k.jpg", href:"https://www.facebook.com/reel/2127511864456822/", alt:"Mariem Hijab ad script"},
-    {image:"/rabha/reel-64k.jpg", href:"https://www.facebook.com/reel/1342410861035210/", alt:"Rabha short-form reel"},
-  ],
-  [
-    {image:"/mariem/reel-60k.jpg", href:"https://www.facebook.com/reel/1584204506002319/", alt:"Mariem Hijab performance creative"},
-    {image:"/rabha/reel-6k.jpg", href:"https://www.facebook.com/reel/1517874099958400/", alt:"Rabha awareness reel"},
-    {image:"/mariem/reel-42k.jpg", href:"https://www.facebook.com/reel/809876478729148/", alt:"Mariem Hijab content test"},
-    {image:"/rabha/reel-31k.jpg", href:"https://www.facebook.com/reel/1306608900933541/", alt:"Rabha sales reel"},
-    {image:"/mariem/reel-2m-new.jpg", href:"https://www.facebook.com/reel/852477507840942/", alt:"Mariem Hijab organic story"},
-  ],
+const proofSources = [
+  { brand:"CyberScale", base:"https://www.instagram.com/cyberscale.agency/reel/", ids:["DayTxWtRnO6","DaunnBio4-I","DapbolmIP9I","DaU-099RD1V","DaI43gHx4Hw","DZzhMoHx-MU","DZmgnKsxn9W","DZfH27lxtCC","DZQIxU6RzFN"] },
+  { brand:"Rabha", base:"https://www.instagram.com/rabha.factory/reel/", ids:["DcbVf8GDIKL","DcYwvHdAeWV","DcRP_TniXxq","DcOdejXCbqO","DcLYA2FlOPu","DcI7R__j45v","Dbs4jj4kbm3","DbiorfrgGCT","DbVoBMVEe2D"] },
+  { brand:"Tallah Dental", base:"https://www.instagram.com/tallah.dentalclinic/reel/", ids:["DRCc2gYgNAu","DQ4q-qqjG9y","DQzVVV9jDVF","DQPaTIwjCbE","DPyUun-DKad","DO3vFeaDEXN"] },
+  { brand:"First Axes", base:"https://www.instagram.com/first.axes/reel/", ids:["DYhLV5XIr8k","DYCb2TMIZDx","DXUR4SwjCsw","DXMdNdbCEAL","DXJ4y-ZgdNB","DXJdGELEm_4","DWd8eKVCBxZ","DWEuUEECCk-","DVYoid5ACfE"] },
+  { brand:"EBT", base:"https://www.instagram.com/ebt.sa/reel/", ids:["CwNDF78s9f2","Cz83tbyIQ5Q","DYE-8ZxIPW9","DX_8RdnI7wi","DU0cmt5iIDu","DUbssJeCDNR","DUYSumACPu7","DUVDSCbCM7K","DUE_E3diIKz"] },
+  { brand:"Khyoot", base:"https://www.instagram.com/khyoot.official/reel/", ids:["Dcbd8sQqKy4","DcWGIT1oM7F","DcRP_7wlJcw","DcOdenDIxQX","Dbi5Q_yErxc","DbQntsPAKlM","DbLeoIKmxIj","DbI_GAWjlS5","DbGSVXQgt6q"] },
+  { brand:"Selected work", base:"https://www.instagram.com/reel/", ids:["DVmMc0vDO6H","DVq7_oajNWS","DWCYoBBDDz_","DWy7T-QMi0x","DWe0R-CsrPH","DWR6Mb7sDgU","DXKYMTxttJL","DXuT935DI-y","DXrk3UVMSE1"] },
 ];
+
+const proofItems = proofSources.flatMap(source => source.ids.map(id => ({
+  image:`/proof/${id}.jpg`,
+  href:`${source.base}${id}/`,
+  alt:`${source.brand} reel`,
+})));
+
+const proofRows = [0,1,2].map(rowIndex => proofItems.filter((_,itemIndex) => itemIndex % 3 === rowIndex));
 
 export default function Home(){
   const [lang,setLang]=useState<Lang>("en"); const t=ui[lang]; const rtl=lang==="ar";
   return <main className={rtl?"site rtl":"site"} dir={rtl?"rtl":"ltr"}>
     <nav className="newNav"><a href="#top" className="wordmark">HANDASA<span>®</span></a><div className="navCenter">{t.nav.map(([href,label])=><a key={href} href={href}>{label}</a>)}</div><div className="navActions"><button className="langSwitch" onClick={()=>setLang(rtl?"en":"ar")} aria-label={rtl?"Switch to English":"التبديل للعربية"}>{rtl?"EN":"ع"}</button><a className="contactPill" href="mailto:abdallamhmd273@gmail.com">{t.contact} <span>↗</span></a></div></nav>
     <div className="heroFlipStage"><section className="newHero cinematicHero" id="top"><figure className="heroBackdrop"><img src="/abdallah-hero.jpg" alt={rtl?"عبدالله المهندس أثناء العمل خلف الكاميرا":"Abdallah Al-Mohandes working behind the camera"}/></figure><div className="heroShade"/><div className="heroStatus"><span className="statusDot" />{t.available}<b>CAIRO · EGYPT</b></div><div className="heroIdentity"><p>{t.role}</p><h1><span>{rtl?"عبدالله":"ABDALLAH"}</span><strong>{rtl?"المهندس":"AL-MOHANDES"}</strong></h1><div><p>{t.intro}</p><a href="#proof-wall">{rtl?"اكتشف الشغل":"DISCOVER THE WORK"}<span>↓</span></a></div></div><div className="heroScroll"><span>01</span><p>{rtl?"انزل لتشوف حجم الشغل":"SCROLL TO SEE THE WORK"}</p></div></section></div>
-    <section className="proofWall" id="proof-wall"><div className="proofWallHead" dir={rtl?"rtl":"ltr"}><small>02 / {rtl?"حجم الشغل":"THE PROOF WALL"}</small><h2>{rtl?<>أكتر من <b>200</b> قطعة محتوى.<br/>مع <b>30+</b> براند وعميل.</>:<><b>200+</b> short-form pieces.<br/><b>30+</b> brands &amp; clients.</>}</h2><p>{rtl?"نجاحات، تجارب، ودروس شكّلت الخطوة اللي بعدها.":"Wins, misses, tests—and the thinking behind the next move."}</p></div><div className="motionRows" dir="ltr">{proofRows.map((row,rowIndex)=><div className={`motionViewport row-${rowIndex+1}`} key={rowIndex}><div className="motionTrack">{[0,1].map(copy=><div className="motionGroup" aria-hidden={copy===1} key={copy}>{row.map((item,i)=><a href={item.href} target="_blank" rel="noreferrer" className="proofTile" key={`${copy}-${i}`} aria-label={item.alt}><img src={item.image} alt={copy===0?item.alt:""}/><span>↗</span></a>)}</div>)}</div></div>)}</div><a className="proofWallCta" href="#rabha-case">{rtl?"استكشف تفاصيل المشاريع":"EXPLORE THE CASE STUDIES"}<span>↓</span></a></section>
+    <section className="proofWall" id="proof-wall"><div className="proofWallHead" dir={rtl?"rtl":"ltr"}><small>02 / {rtl?"حجم الشغل":"THE PROOF WALL"}</small><h2>{rtl?<>أكتر من <b>200</b> قطعة محتوى.<br/>مع <b>30+</b> براند وعميل.</>:<><b>200+</b> short-form pieces.<br/><b>30+</b> brands &amp; clients.</>}</h2><p>{rtl?"نجاحات، تجارب، ودروس شكّلت الخطوة اللي بعدها.":"Wins, misses, tests—and the thinking behind the next move."}</p></div><div className="motionRows" dir="ltr">{proofRows.map((row,rowIndex)=><div className={`motionViewport row-${rowIndex+1}`} key={rowIndex}><div className="motionTrack">{[0,1].map(copy=><div className="motionGroup" aria-hidden={copy===1} key={copy}>{row.map((item,i)=><a href={item.href} target="_blank" rel="noreferrer" className="proofTile" key={`${copy}-${i}`} aria-label={item.alt} tabIndex={copy===1?-1:undefined}><img src={item.image} alt={copy===0?item.alt:""}/><span>↗</span></a>)}</div>)}</div></div>)}</div><a className="proofWallCta" href="#rabha-case">{rtl?"استكشف تفاصيل المشاريع":"EXPLORE THE CASE STUDIES"}<span>↓</span></a></section>
     <section className="rabhaCase" id="rabha-case">
       <div className="sectionIndex light">03 / FEATURED CASE STUDY</div>
       <div className="rabhaIntro"><div><p>{rtl?"رابحة · مصنع عبايات للتجار والموزعين":"RABHA · B2B ABAYA MANUFACTURER"}</p><h2>{rtl?"من صفر متابع إلى مليون جنيه مبيعات.":"From zero followers to EGP 1M in sales."}</h2></div><span>{rtl?"شهران · بدون إعلانات ممولة":"TWO MONTHS · ZERO PAID ADS"}</span></div>
