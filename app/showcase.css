@@ -129,3 +129,54 @@
   .heroBackdrop img,.motionTrack{animation:none}
   .motionViewport{overflow-x:auto;scrollbar-width:none}
 }
+
+/* Rounded, interlocking visual language */
+:root{--radius-xl:44px;--radius-lg:30px;--radius-md:20px;--radius-pill:999px}
+.site{overflow:clip;background:#090908}
+.heroFlipStage{position:relative;z-index:1;perspective:1800px;background:#090908;transform-style:preserve-3d}
+.cinematicHero{transform-origin:center bottom;backface-visibility:hidden;border-radius:0 0 var(--radius-xl) var(--radius-xl);box-shadow:0 35px 80px rgba(0,0,0,.32)}
+.heroBackdrop{border-radius:0 0 var(--radius-xl) var(--radius-xl)}
+.proofWall{z-index:2;margin-top:-34px;padding-top:144px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -24px 70px rgba(0,0,0,.2)}
+
+.contactPill,.heroIdentity>div>a,.primaryCta,.finalCta>a,.rabhaLink,.mariemLink,.morehLink,.proofWallCta{border-radius:var(--radius-pill)}
+.proofTile,.reelCard,.morehCreativeGrid>a,.morehVideoCard{border-radius:var(--radius-md)}
+.proofTile>span,.reelCard i,.morehCreativeGrid i{box-shadow:0 8px 24px rgba(0,0,0,.2)}
+.processPhoto,.portraitType,.heroPortrait{border-radius:var(--radius-lg)}
+.rabhaStats,.mariemGrowth,.morehStats,.salesRun,.morehEvidence{border-radius:var(--radius-lg);overflow:hidden}
+.caseStory,.mariemStory,.morehStory{gap:12px;background:transparent;border:0}
+.caseStory article,.mariemStory article,.morehStory article{border:1px solid rgba(255,255,255,.14);border-radius:var(--radius-lg);overflow:hidden}
+.mariemStory article{border-color:var(--line)}
+.approvedConcept{border:1px solid rgba(255,255,255,.16);border-radius:var(--radius-lg);padding:42px}
+.formatStrip span,.abilities span{border-radius:14px}
+
+.rabhaCase{position:relative;z-index:3;background:#0d0d0c;border-radius:var(--radius-xl) var(--radius-xl) 0 0}
+.mariemCase{position:relative;z-index:4;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -26px 65px rgba(0,0,0,.16)}
+.morehCase{position:relative;z-index:5;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -26px 65px rgba(0,0,0,.18)}
+.approachSection{position:relative;z-index:6;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;background:#10100f}
+.aboutSection{position:relative;z-index:7;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0;box-shadow:0 -26px 65px rgba(0,0,0,.14)}
+.finalCta{position:relative;z-index:8;margin-top:-30px;border-radius:var(--radius-xl) var(--radius-xl) 0 0}
+
+@supports (animation-timeline:view()){
+  .cinematicHero{
+    animation:bookPageTurn linear both;
+    animation-timeline:view(block);
+    animation-range:exit 0% exit 92%;
+  }
+}
+@keyframes bookPageTurn{
+  0%{transform:rotateX(0deg) scale(1);filter:brightness(1);opacity:1}
+  62%{border-radius:0 0 56px 56px}
+  100%{transform:rotateX(-72deg) scale(.94) translateY(-5vh);filter:brightness(.62);opacity:.18}
+}
+
+@media(max-width:800px){
+  :root{--radius-xl:30px;--radius-lg:22px;--radius-md:16px}
+  .proofWall{margin-top:-24px;padding-top:104px}
+  .approvedConcept{padding:26px}
+  .caseStory,.mariemStory,.morehStory{gap:9px}
+  .mariemCase,.morehCase,.approachSection,.aboutSection,.finalCta{margin-top:-20px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .cinematicHero{animation:none!important;transform:none!important;filter:none!important;opacity:1!important}
+}
