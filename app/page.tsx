@@ -40,11 +40,17 @@ const proofSources = [
   { brand:"Selected work", base:"https://www.instagram.com/reel/", ids:["DVmMc0vDO6H","DVq7_oajNWS","DWCYoBBDDz_","DWy7T-QMi0x","DWe0R-CsrPH","DWR6Mb7sDgU","DXKYMTxttJL","DXuT935DI-y","DXrk3UVMSE1"] },
 ];
 
-const proofItems = proofSources.flatMap(source => source.ids.map(id => ({
-  image:`/proof/${id}.jpg`,
-  href:`${source.base}${id}/`,
-  alt:`${source.brand} reel`,
-})));
+const proofItems = Array.from(
+  {length:Math.max(...proofSources.map(source => source.ids.length))},
+  (_,itemIndex) => proofSources.map(source => {
+    const id = source.ids[itemIndex];
+    return id ? {
+      image:`/proof/${id}.jpg`,
+      href:`${source.base}${id}/`,
+      alt:`${source.brand} reel`,
+    } : null;
+  }),
+).flat().filter((item): item is NonNullable<typeof item> => item !== null);
 
 const proofRows = [0,1,2].map(rowIndex => proofItems.filter((_,itemIndex) => itemIndex % 3 === rowIndex));
 
