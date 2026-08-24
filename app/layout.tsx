@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./showcase.css";
 export const metadata: Metadata = {
   metadataBase: new URL("https://creator-portfolio-ar.handasa180.chatgpt.site"),
   title: "Abdallah Al-Mohandes — Creative & Content Strategist",
