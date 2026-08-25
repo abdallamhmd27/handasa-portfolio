@@ -30,6 +30,14 @@ const mariemReels = [
   {id:"809876478729148", views:"42K", image:"/mariem/reel-42k.jpg", en:"Learning test", ar:"تجربة للتعلّم"},
 ];
 
+const tallahStages = [
+  {id:"DPyUun-DKad", image:"/proof/DPyUun-DKad.jpg", en:"The first reel", ar:"أول ريل", enNote:"A first attempt built with basic gear and a lot of learning.", arNote:"أول محاولة بإمكانيات بسيطة ورغبة كبيرة في التعلّم."},
+  {id:"DO3vFeaDEXN", image:"/proof/DO3vFeaDEXN.jpg", en:"Cleaner craft", ar:"تطور التنفيذ", enNote:"Better lighting, framing, and a more confident on-camera rhythm.", arNote:"إضاءة أنضف، كادرات أهدى، وإيقاع أوثق أمام الكاميرا."},
+  {id:"DQPaTIwjCbE", image:"/proof/DQPaTIwjCbE.jpg", en:"A new direction", ar:"بداية اتجاه جديد", enNote:"A visual reset designed to show the clinic with more clarity and trust.", arNote:"إعادة بناء الصورة البصرية لإظهار العيادة بنظافة وثقة أكبر."},
+  {id:"DQzVVV9jDVF", image:"/proof/DQzVVV9jDVF.jpg", en:"Clinical identity", ar:"هوية طبية أوضح", enNote:"Scrubs, a repeatable introduction, and a consistent expert persona.", arNote:"الـScrubs، لازمة تعريف ثابتة، وشخصية طبية أكثر وضوحًا."},
+  {id:"DRCc2gYgNAu", image:"/proof/DRCc2gYgNAu.jpg", en:"The system settles", ar:"الشكل استقر", enNote:"The learning became a repeatable content language for the doctor.", arNote:"التجارب تحولت إلى لغة محتوى قابلة للتكرار لشخصية الدكتور."},
+];
+
 const proofSources = [
   { brand:"CyberScale", base:"https://www.instagram.com/cyberscale.agency/reel/", ids:["DayTxWtRnO6","DaunnBio4-I","DapbolmIP9I","DaU-099RD1V","DaI43gHx4Hw","DZzhMoHx-MU","DZmgnKsxn9W","DZfH27lxtCC","DZQIxU6RzFN"] },
   { brand:"Rabha", base:"https://www.instagram.com/rabha.factory/reel/", ids:["DcYwvHdAeWV","DcRP_TniXxq","DcOdejXCbqO","DcLYA2FlOPu","DcI7R__j45v","Dbs4jj4kbm3","DbiorfrgGCT"] },
@@ -103,6 +111,39 @@ export default function Home(){
       </div></div>
       <div className="approvedConcept"><small>{rtl?"اتجاه أورجانيك معتمد · لم يُنتج":"APPROVED ORGANIC DIRECTION · UNPRODUCED"}</small><div><h3>{rtl?"صوت قماش بيتقطع… ده حال دكاترة العلاج الطبيعي.":"Fabric tears. That’s a physiotherapist’s scrub problem."}</h3><p>{rtl?"سكريبت تمثيلي يبدأ بـAudio Pattern Interrupt، ثم يحول مشكلة حركة حقيقية إلى حل منتج واضح: بنطلون بقصة أوسع، حركة أريح، وضمان سنتين. تمت الموافقة على الفكرة والسكريبت، لكن لم تُنتج بسبب عدم توفر الميزانية.":"A scripted social concept opening with an audio pattern interrupt, then turning a real movement problem into a clear product solution: a wider cut, easier movement, and a two-year guarantee. The direction and script were approved but not produced because budget was unavailable."}</p></div></div>
       <a className="morehLink" href="https://www.instagram.com/morehmedwear/?hl=en" target="_blank" rel="noreferrer">{rtl?"شاهد مريح على إنستجرام":"VIEW MOREH ON INSTAGRAM"}<span>↗</span></a>
+    </section>
+    <section className="tallahCase" id="tallah-case">
+      <div className="sectionIndex">ORIGIN STORY / TALLAH DENTAL</div>
+      <div className="tallahHero">
+        <div><small>{rtl?"أكثر من 6 شهور · بدأت من الصفر":"6+ MONTHS · STARTED FROM ZERO"}</small><h2>{rtl?"مش أكبر أرقامي. لكنها أكبر بداية ليا.":"Not my biggest numbers. My biggest beginning."}</h2></div>
+        <p>{rtl?"طلة مش مجرد مشروع اشتغلت عليه؛ دي المكان اللي بدأت فيه أفهم أنا عايز أكون مين في المحتوى.":"Tallah was more than a client project. It was where I began to understand who I wanted to become in content."}</p>
+      </div>
+      <div className="tallahNarrative">
+        <article className="tallahOpening">
+          <small>{rtl?"القصة":"THE STORY"}</small>
+          <p>{rtl?"وقتها كنت لسه بتعلم يعني إيه محتوى، وإزاي فكرة تتحول لهوية، وإزاي شخص يظهر قدام الكاميرا بشكل يخلي الناس تثق فيه. بدأت أذاكر السوق والمنافسين ومشاكل العيادة، وأجرب في الـbranding والسكريبتات والتصوير.":"I was still learning what content really meant: how an idea becomes an identity, and how someone can show up on camera in a way that earns trust. I studied the market, the competitors, and the clinic’s problems—then started experimenting with branding, scripts, and shooting."}</p>
+        </article>
+        <article className="tallahHeart">
+          <b>{rtl?"بأقل الإمكانيات، بدأت.":"With very little, I started."}</b>
+          <p>{rtl?"اشتريت Softbox ومايك Boya M1 ونزلت أصور أول فيديو. الظروف ماكنتش مثالية، وأنا نفسي كنت لسه بتعلم، لكن دي كانت أول مرة أشوف فكرة كتبتها وهي بتتحول لحاجة حقيقية.":"I bought a softbox and a Boya M1 microphone and went to shoot the first reel. The conditions were far from perfect, and I was still learning—but it was the first time I watched an idea I had written become something real."}</p>
+        </article>
+        <article className="tallahLearning">
+          <p>{rtl?"كل فيديو بعده كان درس: إضاءة أنضف، زاوية أحسن، كادر أهدى، وسكريبت أوضح. وفي مرحلة من الرحلة خليت الشكل سينمائي زيادة عن اللازم. ماكانش الاختيار الأنسب لبراند طبي، لكن الغلطة علمتني إن الجودة مش مجرد صورة حلوة؛ لازم الصورة تخدم ثقة البراند.":"Every reel after that became a lesson: cleaner light, a better angle, calmer framing, and clearer writing. At one point I pushed the look too far into cinematic territory. It was not the right choice for a medical brand, but it taught me that quality is not simply a beautiful image—the image has to serve the brand’s trust."}</p>
+        </article>
+      </div>
+      <div className="tallahReset">
+        <small>{rtl?"من التجربة إلى اتجاه طبي":"FROM EXPERIMENTATION TO A CLINICAL DIRECTION"}</small>
+        <h3>{rtl?"لما فهمت الغلط، ما غطّيتش عليه. بنيت اتجاهًا أوضح.":"When I understood the mistake, I did not hide it. I built a clearer direction."}</h3>
+        <p>{rtl?"بدأنا من صفحة جديدة من الصفر بعد إغلاق صفحة سابقة بسبب خطأ في نشر صورة طبية حساسة. أعدت بناء الكونسبت والتغذية البصرية، طورت اللوجو بأفكار مولدة بالـAI ثم تعاونت مع مصمم للوصول إلى النسخة النهائية، وبعدها طورت له معالجة 3D. وبمراجعة المنافسين، ثبتنا الـScrubs وطريقة تعريف الشخصية والتخصص والمشكلة، حتى أصبح للدكتور حضور طبي متكرر وواضح.":"We restarted from zero after an earlier page was removed following a mistake involving a sensitive clinical image. I rebuilt the concept and visual references, explored the logo through AI-assisted iterations, collaborated with a designer on the final mark, and developed its 3D treatment. After reviewing the competitive landscape, we established the scrubs, the doctor’s recurring introduction, his specialty, and the problem each video would address—creating a clearer and repeatable clinical presence."}</p>
+      </div>
+      <div className="tallahEvolutionHead"><p>{rtl?"التطور كما حدث فعلًا":"THE EVOLUTION, AS IT HAPPENED"}</p><span>{rtl?"اضغط على أي مرحلة لمشاهدة الفيديو":"SELECT A STAGE TO WATCH THE REEL"}</span></div>
+      <div className="tallahEvolution">{tallahStages.map((stage,i)=><a href={`https://www.instagram.com/reel/${stage.id}/`} target="_blank" rel="noreferrer" key={stage.id} className="tallahStage"><figure><img src={stage.image} alt={rtl?`مرحلة ${stage.ar} من مشروع طلة`:`${stage.en} stage from Tallah Dental`}/><i>↗</i></figure><div><small>0{i+1}</small><h3>{rtl?stage.ar:stage.en}</h3><p>{rtl?stage.arNote:stage.enNote}</p></div></a>)}</div>
+      <div className="tallahOutcome">
+        <div><small>{rtl?"النتيجة التي لا تظهر في الداشبورد":"THE RESULT THAT DID NOT LIVE IN A DASHBOARD"}</small><blockquote>{rtl?"ناس دخلت العيادة وقالت: إحنا شفناكم من الفيديوهات.":"People walked into the clinic and said: We saw you in the videos."}</blockquote></div>
+        <p>{rtl?"الأرقام لم تكن ضخمة، والأرشيف القديم لم يعد متاحًا. لكن بالنسبة لي، طلة هو المشروع اللي علّمني أبدأ، أجرب، أغلط، وأطوّر بعيني وإيدي. علشان كده مكانه في الرحلة أكبر من أرقامه.":"The numbers were not huge, and the earlier archive is no longer available. But Tallah taught me how to begin, test, make mistakes, and improve with my own eyes and hands. Its place in my journey is bigger than its metrics."}</p>
+      </div>
+      <div className="tallahRole"><p>{rtl?"دوري":"MY ROLE"}</p><div>{(rtl?["دراسة السوق والمحتوى","مفهوم الـRebranding","استكشاف اللوجو بالـAI ومعالجة 3D","كتابة كل السكريبتات","التصوير والكادرات والإضاءة","توجيه المونتاج"]:["Market & content study","Rebranding concept","AI logo exploration & 3D treatment","Every script","Shooting, framing & lighting","Editing direction"]).map(x=><span key={x}>{x}</span>)}</div><small>{rtl?"المونتاج نُفذ بواسطة متعاونين عبر مراحل المشروع وفق توجيهي. لا تُنسب إليّ مرحلة المونتاج.":"Editing was executed by collaborators across the project stages under my direction. I do not claim the edit itself."}</small></div>
+      <a className="tallahLink" href="https://www.instagram.com/tallah.dentalclinic/" target="_blank" rel="noreferrer">{rtl?"شاهد طلة على إنستجرام":"VIEW TALLAH ON INSTAGRAM"}<span>↗</span></a>
     </section>
     <section className="approachSection" id="approach"><div className="sectionIndex light">06 / PROCESS</div><div className="approachTop"><p>{t.approachK}</p><h2>{t.approachTitle}</h2><span>{t.approachIntro}</span></div><figure className="processPhoto"><img src="/abdallah-process.jpg" alt={rtl?"كواليس تجهيز موقع تصوير":"Behind the scenes of a production setup"}/><figcaption>BEHIND THE SCENES · DIRECTION IN PRACTICE</figcaption></figure><div className="steps">{t.steps.map(s=><article key={s[0]}><b>{s[0]}</b><div><h3>{s[1]}</h3><p>{s[2]}</p></div></article>)}</div></section>
     <section className="aboutSection" id="about"><div className="sectionIndex">07 / PROFILE</div><div className="aboutGrid"><figure className="portraitType"><img src="/abdallah-about.jpg" alt={rtl?"صورة عبدالله المهندس":"Portrait of Abdallah Al-Mohandes"}/><span>ABDALLAH</span><i>AL-MOHANDES</i></figure><div className="aboutText"><small>{t.aboutK}</small><h2>{t.aboutTitle}</h2><p>{t.aboutP}</p><div className="abilities">{t.abilities.map((a,i)=><span key={a}><b>0{i+1}</b>{a}</span>)}</div></div></div></section>
