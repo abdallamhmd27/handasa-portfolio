@@ -31,8 +31,8 @@ const mariemReels = [
 ];
 
 const tallahStages = [
-  {id:"DPyUun-DKad", image:"/proof/DPyUun-DKad.jpg", en:"The first reel", ar:"أول ريل", enNote:"A first attempt built with basic gear and a lot of learning.", arNote:"أول محاولة بإمكانيات بسيطة ورغبة كبيرة في التعلّم."},
-  {id:"DO3vFeaDEXN", image:"/proof/DO3vFeaDEXN.jpg", en:"Cleaner craft", ar:"تطور التنفيذ", enNote:"Better lighting, framing, and a more confident on-camera rhythm.", arNote:"إضاءة أنضف، كادرات أهدى، وإيقاع أوثق أمام الكاميرا."},
+  {id:"DPyUun-DKad", image:"/proof/DPyUun-DKad-frame.jpg", en:"The first reel", ar:"أول ريل", enNote:"A first attempt built with basic gear and a lot of learning.", arNote:"أول محاولة بإمكانيات بسيطة ورغبة كبيرة في التعلّم."},
+  {id:"DO3vFeaDEXN", image:"/proof/DO3vFeaDEXN-frame.jpg", en:"Cleaner craft", ar:"تطور التنفيذ", enNote:"Better lighting, framing, and a more confident on-camera rhythm.", arNote:"إضاءة أنضف، كادرات أهدى، وإيقاع أوثق أمام الكاميرا."},
   {id:"DQPaTIwjCbE", image:"/proof/DQPaTIwjCbE.jpg", en:"A new direction", ar:"بداية اتجاه جديد", enNote:"A visual reset designed to show the clinic with more clarity and trust.", arNote:"إعادة بناء الصورة البصرية لإظهار العيادة بنظافة وثقة أكبر."},
   {id:"DQzVVV9jDVF", image:"/proof/DQzVVV9jDVF.jpg", en:"Clinical identity", ar:"هوية طبية أوضح", enNote:"Scrubs, a repeatable introduction, and a consistent expert persona.", arNote:"الـScrubs، لازمة تعريف ثابتة، وشخصية طبية أكثر وضوحًا."},
   {id:"DRCc2gYgNAu", image:"/proof/DRCc2gYgNAu.jpg", en:"The system settles", ar:"الشكل استقر", enNote:"The learning became a repeatable content language for the doctor.", arNote:"التجارب تحولت إلى لغة محتوى قابلة للتكرار لشخصية الدكتور."},
