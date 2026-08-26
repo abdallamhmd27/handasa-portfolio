@@ -47,7 +47,7 @@ export default function StorytellingPage() {
 
   return <main className={rtl ? "skillsPage rtl" : "skillsPage"} dir={rtl ? "rtl" : "ltr"}>
     <nav className="skillsNav">
-      <a href="/" className="skillsMark">HANDASA<span>®</span></a>
+      <span className="navSpacer" aria-hidden="true" />
       <div className="skillsNavLinks">{t.nav.map(([href, label]) => <a className={href === "/skills" ? "active" : ""} href={href} key={href}>{label}</a>)}</div>
       <div className="skillsActions"><button onClick={() => setLang(rtl ? "en" : "ar")}>{rtl ? "EN" : "ع"}</button><a href={whatsapp} target="_blank" rel="noreferrer">{t.contact}<span>↗</span></a></div>
     </nav>

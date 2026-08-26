@@ -41,7 +41,7 @@ export default function SkillsHub() {
   const whatsapp = `https://wa.me/201013454954?text=${encodeURIComponent(rtl ? "أهلًا عبدالله، شوفت صفحة المهارات وعايز أتكلم معاك بخصوص مشروع." : "Hi Abdallah, I saw your skills page and would like to discuss a project with you.")}`;
   return <main className={rtl ? "skillsHub rtl" : "skillsHub"} dir={rtl ? "rtl" : "ltr"}>
     <nav className="skillsNav hubNav">
-      <a href="/" className="skillsMark">HANDASA<span>®</span></a>
+      <span className="navSpacer" aria-hidden="true" />
       <div className="skillsNavLinks">{t.nav.map(([href, label]) => <a className={href === "/skills" ? "active" : ""} href={href} key={href}>{label}</a>)}</div>
       <div className="skillsActions"><button onClick={() => setLang(rtl ? "en" : "ar")}>{rtl ? "EN" : "ع"}</button><a href={whatsapp} target="_blank" rel="noreferrer">{t.contact}<span>↗</span></a></div>
     </nav>
