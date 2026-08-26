@@ -78,7 +78,7 @@ export default function SkillsPage() {
 
     <section className="skillLibrary">
       <div><small>{t.library}</small><h2>{t.libraryTitle}</h2></div>
-      <div className="futureSkills">{t.future.map(([number, label]) => <article key={number}><b>{number}</b><span>{label}</span><i>SOON</i></article>)}</div>
+      <div className="futureSkills">{t.future.map(([number, label]) => <article key={number}><b>{number}</b><span>{label}</span></article>)}</div>
     </section>
 
     <section className="skillsCta"><small>{t.ctaK}</small><h2>{t.cta}</h2><a href={whatsapp} target="_blank" rel="noreferrer">{t.start}<span>↗</span></a></section>
