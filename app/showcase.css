@@ -589,6 +589,45 @@
   .cinematicHero{animation:none!important;transform:none!important;filter:none!important;opacity:1!important}
 }
 
+/* Release 38: restore motion on phones without the heavy 3D compositing that
+   can break full-screen Safari rendering. */
+@media(max-width:800px) and (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .cinematicHero{
+      animation:mobilePageLift linear both!important;
+      animation-timeline:view(block)!important;
+      animation-range:exit 0% exit 92%!important;
+      transform-origin:center bottom;
+      will-change:transform,opacity;
+    }
+  }
+  .motionViewport,.motionViewport.row-1,.motionViewport.row-2,.motionViewport.row-3{
+    width:104%;
+    margin-left:-2%;
+    padding:0;
+    overflow:hidden;
+    scroll-snap-type:none;
+    touch-action:pan-y;
+  }
+  .motionTrack{
+    gap:9px;
+    animation:proofMarqueeMobile 52s linear infinite!important;
+    transform:translate3d(0,0,0)!important;
+    will-change:transform;
+  }
+  .row-2 .motionTrack{animation-direction:reverse!important;animation-duration:57s!important}
+  .row-3 .motionTrack{animation-duration:54s!important}
+  .motionGroup[aria-hidden="true"]{display:flex}
+}
+@keyframes mobilePageLift{
+  from{transform:translateY(0) scale(1);filter:brightness(1);opacity:1}
+  to{transform:translateY(-32px) scale(.985);filter:brightness(.8);opacity:.72}
+}
+@keyframes proofMarqueeMobile{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(calc(-50% - 4.5px),0,0)}
+}
+
 /* Final cascade guarantees for the release-35 interaction and palette. */
 .statusDot{background:#d69aab;box-shadow:0 0 0 4px rgba(214,154,171,.16)}
 .newNav{direction:ltr;height:76px;padding:0 4.2vw;grid-template-columns:1fr auto;grid-template-areas:"lang actions"}
