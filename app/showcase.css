@@ -155,6 +155,9 @@
 }
 .headerLang{grid-area:lang;justify-self:start;position:relative;z-index:84}
 .newNav .navActions{grid-area:actions;position:relative;z-index:84;direction:ltr}
+.floatingWhatsapp{position:fixed;z-index:90;right:4.2vw;bottom:26px;min-width:182px;height:54px;padding:0 19px;border-radius:999px;display:flex;align-items:center;justify-content:center;gap:10px;background:#25D366;color:#fff;box-shadow:0 14px 34px rgba(10,94,44,.32);font-size:9px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;transition:transform .2s,background .2s}
+.floatingWhatsapp:hover{background:#1dbb59;transform:translateY(-3px)}
+.whatsappGlyph{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.18);font:700 19px/1 Arial,sans-serif;transform:rotate(-20deg)}
 .newNav .contactPill{min-height:48px;padding:0 22px;background:var(--wine)}
 .menuButton{width:48px;height:48px;padding:0;border:1px solid rgba(255,255,255,.42);border-radius:50%;background:rgba(8,8,7,.18);display:grid;place-content:center;gap:6px;cursor:pointer;color:#fff}
 .menuButton i{display:block;width:19px;height:1px;background:currentColor;transition:transform .25s,translate .25s}
@@ -231,7 +234,7 @@
 
 @media(max-width:800px){
   .site{padding-bottom:0}
-  .newNav{height:64px;padding:0 4vw;grid-template-columns:1fr auto;background:rgba(9,9,8,.72)}
+  .newNav{height:64px;padding:0 4vw;grid-template-columns:1fr auto;background:transparent}
   .newNav .langSwitch{width:38px;height:38px}
   .newNav .contactPill{display:flex;min-height:40px;padding:0 13px;gap:7px;font-size:7px;white-space:nowrap}
   .newNav .contactPill span{font-size:13px}
@@ -257,6 +260,7 @@
   .firstAxesPageVideo>a>div{padding:26px}
   .firstAxesPageVideo h3{margin:17px 0 30px;font-size:38px}
   .axesFeedGrid{grid-template-columns:repeat(2,1fr)}
+  .floatingWhatsapp{right:5vw;bottom:calc(18px + env(safe-area-inset-bottom));min-width:164px;height:50px;font-size:8px}
 }
 
 /* Persistent navigation: always visible, with a compact mobile dock. */
@@ -588,6 +592,7 @@
 /* Final cascade guarantees for the release-35 interaction and palette. */
 .statusDot{background:#d69aab;box-shadow:0 0 0 4px rgba(214,154,171,.16)}
 .newNav{direction:ltr;height:76px;padding:0 4.2vw;grid-template-columns:1fr auto;grid-template-areas:"lang actions"}
+.newNav{background:transparent!important;border-bottom:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
 .newNav .headerLang{grid-area:lang;justify-self:start;position:relative;z-index:84}
 .newNav .navActions{grid-area:actions;position:relative;z-index:84;direction:ltr}
 .firstAxesCase{--axes-green:var(--money-green);--axes-brand:#a17943;border-top-color:var(--axes-brand)}
@@ -600,7 +605,7 @@
 
 @media(max-width:800px){
   .site{padding-bottom:0}
-  .newNav{height:64px;padding:0 4vw;grid-template-columns:1fr auto;background:rgba(9,9,8,.72)}
+  .newNav{height:64px;padding:0 4vw;grid-template-columns:1fr auto;background:transparent!important}
   .newNav .navCenter{display:none}
   .newNav .contactPill{display:flex;min-width:0;min-height:40px;padding:0 13px;gap:7px;font-size:7px;white-space:nowrap}
   .axesVideoGrid>a.axesVideoCard{grid-column:auto;width:auto;margin:0;border-bottom:1px solid var(--line);font-size:inherit}
