@@ -76,6 +76,15 @@ const firstAxesDesigns = [
   {href:"https://www.instagram.com/p/DXJ5PhsiKPq/", image:"/first-axes/design-al-narjis.jpg", en:"Al Narjis villa design", ar:"تصميم فيلا حي النرجس"},
 ];
 
+const ebtkaratReels = [
+  {id:"DROMiIxiAfq"},
+  {id:"DQck0dOiLpV"},
+  {id:"DUYSumACPu7", image:"/proof/DUYSumACPu7.jpg"},
+  {id:"DUVDSCbCM7K", image:"/proof/DUVDSCbCM7K.jpg"},
+  {id:"DTpZO5GCIvx"},
+  {id:"DR_9trdiFMd"},
+];
+
 export default function Home(){
   const [lang,setLang]=useState<Lang>("en"); const [menuOpen,setMenuOpen]=useState(false); const t=ui[lang]; const rtl=lang==="ar";
   const whatsappUrl=`https://wa.me/201013454954?text=${encodeURIComponent(rtl?"أهلًا عبدالله، شوفت البورتفوليو وعايز أتكلم معاك بخصوص مشروع.":"Hi Abdallah, I saw your portfolio and would like to discuss a project with you.")}`;
@@ -155,6 +164,15 @@ export default function Home(){
       <div className="firstAxesCredits"><p>{rtl?"المتعاونون الأساسيون":"CORE COLLABORATORS"}</p><a href="https://www.instagram.com/menna_ebrahim266/" target="_blank" rel="noreferrer"><b>Menna Ebrahim</b><span>Creative Director · Marketing Strategist ↗</span></a><a href="https://www.instagram.com/yousefhmohd/" target="_blank" rel="noreferrer"><b>Yousef Mohamed</b><span>Art Director ↗</span></a></div>
       <div className="firstAxesAccuracy"><small>{rtl?"ملاحظة الدقة":"ACCURACY NOTE"}</small><p>{rtl?"رقم 400 ألف ريال من تقرير إدارة الشركة ولا تتوفر لديّ لقطة Dashboard. نمو الحساب إلى نحو 1.8K يُعرض كسياق لفترة العمل، وليس كنتيجة منسوبة للمحتوى الأورجانيك وحده. المونتاج والتصميم نفذهما أعضاء الفريق.":"The SAR 400K figure was reported by company management; I do not hold a dashboard screenshot. Growth to roughly 1.8K is shown as tenure context, not attributed solely to organic content. Editing and visual design were executed by team members."}</p></div>
       <a className="firstAxesLink" href="https://www.instagram.com/first.axes/" target="_blank" rel="noreferrer">{rtl?"شاهد First Axes على إنستجرام":"VIEW FIRST AXES ON INSTAGRAM"}<span>↗</span></a>
+    </section>
+    <section className="ebtkaratCase" id="ebtkarat-case">
+      <div className="sectionIndex">07 / SELECTED CONTENT WRITING</div>
+      <div className="ebtkaratIntro"><div><p>{rtl?"ابتكارات · استوديو تصميم داخلي · الرياض":"EBTKRAT · INTERIOR DESIGN STUDIO · RIYADH"}</p><h2>{rtl?"لما التصميم يكتمل، الكلمة تخليه يتعاش.":"When design is complete, language makes it lived."}</h2></div><span>{rtl?"4 شهور · Content Writing":"4 MONTHS · CONTENT WRITING"}</span></div>
+      <div className="ebtkaratStatement"><p>{rtl?"ابتكارات كانت شركة مستقرة بهوية فاخرة وواضحة. دوري كان كتابة المحتوى: الـheadlines والكابتشن التي تضيف معنى للتصميم وتحافظ على هدوء وفخامة البراند.":"Ebtkarat was an established studio with a refined visual identity. My role was Content Writing: developing the headlines and captions that gave each design a point of view while protecting the brand’s quiet luxury."}</p><aside><small>{rtl?"المسمى":"POSITION"}</small><b>Content<br/>Writing</b></aside></div>
+      <div className="ebtkaratHighlight"><small>{rtl?"مثال على زاوية الكتابة":"A WRITING ANGLE"}</small><blockquote>{rtl?"«تصميم كامل يُعاش.»":"“A complete design, meant to be lived.”"}</blockquote><p>{rtl?"مش وصف للمكان؛ جملة تنقل التصميم من صورة إلى تجربة يعيشها صاحبها.":"Not a description of a space—a line that turns design from an image into an experience its owner can live."}</p></div>
+      <div className="ebtkaratEvidence"><div className="ebtkaratEvidenceHead"><p>{rtl?"نماذج من المحتوى المكتوب":"SELECTED WRITING IN CONTEXT"}</p><span>{rtl?"اضغط على أي غلاف لمشاهدة الريل":"SELECT A COVER TO VIEW THE REEL"}</span></div><div className="ebtkaratReelGrid">{ebtkaratReels.map((reel,i)=><a href={`https://www.instagram.com/reel/${reel.id}/`} target="_blank" rel="noreferrer" key={reel.id}>{reel.image?<img src={reel.image} alt={rtl?`نموذج محتوى ابتكارات ${i+1}`:`Ebtkarat content-writing sample ${i+1}`} loading="lazy" decoding="async"/>:<b>{rtl?"Content\nWriting":"CONTENT\nWRITING"}</b>}<span>0{i+1}</span><i>↗</i></a>)}</div></div>
+      <p className="ebtkaratNote">{rtl?"هذه النماذج تُعرض لإثبات دوري في كتابة المحتوى فقط. التصميم والتنفيذ البصري تمّا بواسطة فريق ابتكارات.":"These samples are shown as evidence of my Content Writing role only. Visual design and execution belonged to the Ebtkarat team."}</p>
+      <a className="ebtkaratLink" href="https://www.instagram.com/ebt.sa/" target="_blank" rel="noreferrer">{rtl?"شاهد ابتكارات على إنستجرام":"VIEW EBTKRAT ON INSTAGRAM"}<span>↗</span></a>
     </section>
     <section className="tallahCase" id="tallah-case">
       <div className="sectionIndex">ORIGIN STORY / TALLAH DENTAL</div>

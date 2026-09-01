@@ -431,6 +431,73 @@
   .firstAxesAccuracy{grid-template-columns:1fr;gap:24px;margin-top:55px;padding:26px}
 }
 
+/* Ebtkarat — content writing inside a quiet-luxury design identity. */
+.ebtkaratCase{
+  --ebt-ink:#1c1b19;
+  --ebt-paper:#ece7de;
+  --ebt-gold:#9a8059;
+  position:relative;
+  z-index:7;
+  margin-top:-30px;
+  padding:110px 4.2vw 120px;
+  overflow:hidden;
+  background:var(--ebt-paper);
+  color:var(--ebt-ink);
+  border-top:7px solid var(--ebt-gold);
+  border-radius:var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow:0 -26px 65px rgba(0,0,0,.17);
+}
+.ebtkaratCase:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;background:repeating-linear-gradient(90deg,transparent 0 46px,rgba(28,27,25,.045) 47px 48px)}
+.ebtkaratCase>*{position:relative;z-index:1}
+.ebtkaratIntro{display:grid;grid-template-columns:1fr auto;gap:6vw;align-items:end;margin:60px 0 72px}
+.ebtkaratIntro p{margin:0 0 28px;font-size:9px;letter-spacing:.16em;color:var(--ebt-gold)}
+.ebtkaratIntro h2{max-width:980px;margin:0;font-family:Georgia,serif;font-size:clamp(55px,7.1vw,108px);font-weight:400;line-height:.88;letter-spacing:-.065em}
+.ebtkaratIntro>span{padding-bottom:10px;font-size:9px;letter-spacing:.14em;color:#716a60}
+.ebtkaratStatement{display:grid;grid-template-columns:1.35fr .65fr;gap:8vw;align-items:stretch;padding:48px;border:1px solid rgba(28,27,25,.22);border-radius:var(--radius-lg);background:rgba(250,248,242,.58)}
+.ebtkaratStatement>p{max-width:760px;margin:0;font-size:clamp(19px,2vw,28px);line-height:1.45}
+.ebtkaratStatement aside{padding-left:36px;border-left:1px solid rgba(28,27,25,.18);display:flex;flex-direction:column;justify-content:space-between}
+.rtl .ebtkaratStatement aside{padding-left:0;padding-right:36px;border-left:0;border-right:1px solid rgba(28,27,25,.18)}
+.ebtkaratStatement small,.ebtkaratHighlight small{font-size:8px;letter-spacing:.15em;color:var(--ebt-gold)}
+.ebtkaratStatement b{font-family:Georgia,serif;font-size:clamp(36px,4.6vw,64px);font-weight:400;line-height:.88;letter-spacing:-.05em}
+.ebtkaratHighlight{display:grid;grid-template-columns:.46fr 1.4fr .7fr;gap:5vw;align-items:end;margin-top:88px;padding:46px 48px;border-radius:var(--radius-lg);background:var(--ebt-ink);color:#f4f0e9}
+.ebtkaratHighlight blockquote{margin:0;font-family:Georgia,serif;font-size:clamp(36px,5vw,76px);font-style:italic;font-weight:400;line-height:.93;letter-spacing:-.055em}
+.ebtkaratHighlight p{margin:0;font-size:12px;line-height:1.75;color:#c8c0b4}
+.ebtkaratEvidence{margin-top:90px}
+.ebtkaratEvidenceHead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid rgba(28,27,25,.25)}
+.ebtkaratEvidenceHead p{margin:0;font-family:Georgia,serif;font-size:25px;font-style:italic}
+.ebtkaratEvidenceHead span{font-size:8px;letter-spacing:.13em;color:#716a60;text-align:right}
+.ebtkaratReelGrid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.ebtkaratReelGrid a{position:relative;aspect-ratio:9/14;overflow:hidden;border-radius:var(--radius-md);background:#272522;color:#f4f0e9}
+.ebtkaratReelGrid img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.ebtkaratReelGrid a:hover img{transform:scale(1.04)}
+.ebtkaratReelGrid a:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.43))}
+.ebtkaratReelGrid b{position:absolute;inset:0;z-index:1;padding:20px 14px;display:flex;align-items:flex-end;white-space:pre-line;font-size:11px;line-height:1.25;letter-spacing:.13em}
+.ebtkaratReelGrid span{position:absolute;z-index:2;left:12px;top:12px;font-size:8px}
+.ebtkaratReelGrid i{position:absolute;z-index:2;right:10px;bottom:10px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--ebt-paper);color:var(--ebt-ink);font-style:normal}
+.ebtkaratNote{max-width:860px;margin:24px 0 0;font-size:10px;line-height:1.75;color:#625d55}
+.ebtkaratLink{width:300px;max-width:100%;margin-top:42px;padding:18px 20px;border-radius:999px;display:flex;align-items:center;justify-content:space-between;background:var(--ebt-ink);color:#fff;font-size:9px;letter-spacing:.1em}
+.ebtkaratLink span{font-size:17px}
+
+@media(max-width:800px){
+  .ebtkaratCase{margin-top:-20px;padding:80px 5vw 90px}
+  .ebtkaratIntro{display:block;margin:45px 0}
+  .ebtkaratIntro h2{font-size:clamp(46px,12.5vw,64px);line-height:.91}
+  .ebtkaratIntro>span{display:block;margin-top:24px}
+  .ebtkaratStatement{grid-template-columns:1fr;gap:35px;padding:28px}
+  .ebtkaratStatement>p{font-size:20px}
+  .ebtkaratStatement aside{min-height:140px;padding:24px 0 0;border-left:0;border-top:1px solid rgba(28,27,25,.18)}
+  .rtl .ebtkaratStatement aside{padding:24px 0 0;border-right:0}
+  .ebtkaratHighlight{grid-template-columns:1fr;gap:26px;margin-top:60px;padding:30px}
+  .ebtkaratHighlight blockquote{font-size:47px}
+  .ebtkaratEvidence{margin-top:60px}
+  .ebtkaratEvidenceHead{display:block}
+  .ebtkaratEvidenceHead span{display:block;margin-top:12px;text-align:left;line-height:1.6}
+  .rtl .ebtkaratEvidenceHead span{text-align:right}
+  .ebtkaratReelGrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+  .ebtkaratReelGrid a{aspect-ratio:9/13}
+  .ebtkaratLink{width:100%}
+}
+
 /* Tallah Dental — an honest origin story rather than a performance case. */
 .tallahCase{
   --clinic:#b9cdd4;
