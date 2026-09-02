@@ -462,6 +462,16 @@
 .ebtkaratHighlight{display:grid;grid-template-columns:.46fr 1.4fr .7fr;gap:5vw;align-items:end;margin-top:88px;padding:46px 48px;border-radius:var(--radius-lg);background:var(--ebt-ink);color:#f4f0e9}
 .ebtkaratHighlight blockquote{margin:0;font-family:Georgia,serif;font-size:clamp(36px,5vw,76px);font-style:italic;font-weight:400;line-height:.93;letter-spacing:-.055em}
 .ebtkaratHighlight p{margin:0;font-size:12px;line-height:1.75;color:#c8c0b4}
+.ebtkaratCampaign{margin-top:90px}
+.ebtkaratCampaignGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ebtkaratCampaignGrid>a{position:relative;aspect-ratio:9/14;overflow:hidden;border-radius:var(--radius-md);background:#272522;color:#fff}
+.ebtkaratCampaignGrid img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.ebtkaratCampaignGrid>a:hover img{transform:scale(1.035)}
+.ebtkaratCampaignGrid>a:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 58%,rgba(0,0,0,.82))}
+.ebtkaratCampaignGrid>a>div{position:absolute;z-index:1;left:18px;right:18px;bottom:18px;display:flex;align-items:end;justify-content:space-between;gap:12px}
+.ebtkaratCampaignGrid small{font-size:8px;letter-spacing:.14em}
+.ebtkaratCampaignGrid b{padding-bottom:3px;border-bottom:1px solid;font-size:8px;letter-spacing:.12em;white-space:nowrap}
+.ebtkaratCampaign>p{max-width:840px;margin:24px 0 0;font-size:10px;line-height:1.75;color:#625d55}
 .ebtkaratEvidence{margin-top:90px}
 .ebtkaratEvidenceHead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid rgba(28,27,25,.25)}
 .ebtkaratEvidenceHead p{margin:0;font-family:Georgia,serif;font-size:25px;font-style:italic}
@@ -489,6 +499,9 @@
   .rtl .ebtkaratStatement aside{padding:24px 0 0;border-right:0}
   .ebtkaratHighlight{grid-template-columns:1fr;gap:26px;margin-top:60px;padding:30px}
   .ebtkaratHighlight blockquote{font-size:47px}
+  .ebtkaratCampaign{margin-top:60px}
+  .ebtkaratCampaignGrid{grid-template-columns:1fr;gap:9px}
+  .ebtkaratCampaignGrid>a{aspect-ratio:9/13}
   .ebtkaratEvidence{margin-top:60px}
   .ebtkaratEvidenceHead{display:block}
   .ebtkaratEvidenceHead span{display:block;margin-top:12px;text-align:left;line-height:1.6}

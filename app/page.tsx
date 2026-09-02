@@ -85,6 +85,13 @@ const ebtkaratReels = [
   {id:"DR_9trdiFMd"},
 ];
 
+const ebtkaratDarkAds = [
+  {image:"/ebtkarat/dark-ad-furnishing.png", label:"DARK AD 01"},
+  {image:"/ebtkarat/dark-ad-materials.png", label:"DARK AD 02"},
+  {image:"/ebtkarat/dark-ad-execution.png", label:"DARK AD 03"},
+];
+const ebtkaratDarkAdsUrl="https://drive.google.com/drive/folders/16vXu45qimcXV2mat3NCdcWUbn5go0Wwk";
+
 export default function Home(){
   const [lang,setLang]=useState<Lang>("en"); const [menuOpen,setMenuOpen]=useState(false); const t=ui[lang]; const rtl=lang==="ar";
   const whatsappUrl=`https://wa.me/201013454954?text=${encodeURIComponent(rtl?"أهلًا عبدالله، شوفت البورتفوليو وعايز أتكلم معاك بخصوص مشروع.":"Hi Abdallah, I saw your portfolio and would like to discuss a project with you.")}`;
@@ -170,6 +177,7 @@ export default function Home(){
       <div className="ebtkaratIntro"><div><p>{rtl?"ابتكارات · استوديو تصميم داخلي · الرياض":"EBTKRAT · INTERIOR DESIGN STUDIO · RIYADH"}</p><h2>{rtl?"لما التصميم يكتمل، الكلمة تخليه يتعاش.":"When design is complete, language makes it lived."}</h2></div><span>{rtl?"4 شهور · Content Writing":"4 MONTHS · CONTENT WRITING"}</span></div>
       <div className="ebtkaratStatement"><p>{rtl?"ابتكارات كانت شركة مستقرة بهوية فاخرة وواضحة. دوري كان كتابة المحتوى: الـheadlines والكابتشن التي تضيف معنى للتصميم وتحافظ على هدوء وفخامة البراند.":"Ebtkarat was an established studio with a refined visual identity. My role was Content Writing: developing the headlines and captions that gave each design a point of view while protecting the brand’s quiet luxury."}</p><aside><small>{rtl?"المسمى":"POSITION"}</small><b>Content<br/>Writing</b></aside></div>
       <div className="ebtkaratHighlight"><small>{rtl?"مثال على زاوية الكتابة":"A WRITING ANGLE"}</small><blockquote>{rtl?"«تصميم كامل يُعاش.»":"“A complete design, meant to be lived.”"}</blockquote><p>{rtl?"مش وصف للمكان؛ جملة تنقل التصميم من صورة إلى تجربة يعيشها صاحبها.":"Not a description of a space—a line that turns design from an image into an experience its owner can live."}</p></div>
+      <div className="ebtkaratCampaign"><div className="ebtkaratEvidenceHead"><p>{rtl?"حملة Dark Ads":"DARK ADS CAMPAIGN"}</p><span>{rtl?"3 من أصل 5 فيديوهات · Content Writing":"3 OF 5 VIDEOS · CONTENT WRITING"}</span></div><div className="ebtkaratCampaignGrid">{ebtkaratDarkAds.map((ad,i)=><a href={ebtkaratDarkAdsUrl} target="_blank" rel="noreferrer" key={ad.image}><img src={ad.image} alt={rtl?`فيديو دارك أد ابتكارات ${i+1}`:`Ebtkarat dark-ad video ${i+1}`} loading="lazy"/><div><small>{ad.label}</small><b>{rtl?"شاهد الفيديو":"OPEN VIDEO"} ↗</b></div></a>)}</div><p>{rtl?"كتبت محتوى الحملة بالكامل. المعروض هنا 3 فيديوهات من أصل 5؛ التنفيذ البصري والمونتاج لفريق ابتكارات.":"I wrote the campaign content in full. Shown here: 3 of the 5 videos; visual execution and editing belonged to the Ebtkarat team."}</p></div>
       <div className="ebtkaratEvidence"><div className="ebtkaratEvidenceHead"><p>{rtl?"نماذج من المحتوى المكتوب":"SELECTED WRITING IN CONTEXT"}</p><span>{rtl?"اضغط على أي غلاف لمشاهدة الريل":"SELECT A COVER TO VIEW THE REEL"}</span></div><div className="ebtkaratReelGrid">{ebtkaratReels.map((reel,i)=><a href={`https://www.instagram.com/reel/${reel.id}/`} target="_blank" rel="noreferrer" key={reel.id}>{reel.image?<img src={reel.image} alt={rtl?`نموذج محتوى ابتكارات ${i+1}`:`Ebtkarat content-writing sample ${i+1}`} loading="lazy" decoding="async"/>:<b>{rtl?"Content\nWriting":"CONTENT\nWRITING"}</b>}<span>0{i+1}</span><i>↗</i></a>)}</div></div>
       <p className="ebtkaratNote">{rtl?"هذه النماذج تُعرض لإثبات دوري في كتابة المحتوى فقط. التصميم والتنفيذ البصري تمّا بواسطة فريق ابتكارات.":"These samples are shown as evidence of my Content Writing role only. Visual design and execution belonged to the Ebtkarat team."}</p>
       <a className="ebtkaratLink" href="https://www.instagram.com/ebt.sa/" target="_blank" rel="noreferrer">{rtl?"شاهد ابتكارات على إنستجرام":"VIEW EBTKRAT ON INSTAGRAM"}<span>↗</span></a>
