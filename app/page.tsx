@@ -81,7 +81,6 @@ const firstAxesDesigns = [
   {href:"https://www.instagram.com/reel/DXJ4y-ZgdNB/", image:"/proof/DXJ4y-ZgdNB.jpg", en:"Architecture content sample", ar:"نموذج محتوى معماري"},
   {href:"https://www.instagram.com/reel/DXJdGELEm_4/", image:"/proof/DXJdGELEm_4.jpg", en:"Architecture content sample", ar:"نموذج محتوى معماري"},
   {href:"https://www.instagram.com/reel/DWd8eKVCBxZ/", image:"/proof/DWd8eKVCBxZ.jpg", en:"Architecture content sample", ar:"نموذج محتوى معماري"},
-  {href:"https://www.instagram.com/reel/DWEuUEECCk-/", image:"/proof/DWEuUEECCk-.jpg", en:"Architecture content sample", ar:"نموذج محتوى معماري"},
   {href:"https://www.instagram.com/reel/DVYoid5ACfE/", image:"/proof/DVYoid5ACfE.jpg", en:"Architecture content sample", ar:"نموذج محتوى معماري"},
 ];
 
