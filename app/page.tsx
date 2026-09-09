@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 type Lang = "en" | "ar";
 
@@ -93,11 +93,30 @@ const ebtkaratDarkAds = [
 const ebtkaratDarkAdsUrl="https://drive.google.com/drive/folders/16vXu45qimcXV2mat3NCdcWUbn5go0Wwk";
 
 export default function Home(){
-  const [lang,setLang]=useState<Lang>("en"); const [menuOpen,setMenuOpen]=useState(false); const t=ui[lang]; const rtl=lang==="ar";
+  // Start from one predictable language during hydration, then restore a
+  // deliberate visitor choice. This avoids Android rendering a mixed
+  // right-to-left / left-to-right tree before React has attached events.
+  const [lang,setLang]=useState<Lang>("en");
+  const [isAndroid,setIsAndroid]=useState(false);
+  const [menuOpen,setMenuOpen]=useState(false);
+  useEffect(()=>{
+    try{
+      const saved=window.localStorage.getItem("handasa-portfolio-language");
+      if(saved==="ar"||saved==="en") setLang(saved);
+    }catch{}
+    setIsAndroid(/Android/i.test(navigator.userAgent));
+  },[]);
+  const toggleLanguage=()=>{
+    const next:Lang=lang==="ar"?"en":"ar";
+    setLang(next);
+    setMenuOpen(false);
+    try{window.localStorage.setItem("handasa-portfolio-language",next);}catch{}
+  };
+  const t=ui[lang]; const rtl=lang==="ar";
   const whatsappUrl=`https://wa.me/201013454954?text=${encodeURIComponent(rtl?"أهلًا عبدالله، شوفت البورتفوليو وعايز أتكلم معاك بخصوص مشروع.":"Hi Abdallah, I saw your portfolio and would like to discuss a project with you.")}`;
-  return <main className={rtl?"site rtl":"site"} dir={rtl?"rtl":"ltr"}>
+  return <main className={`site${rtl?" rtl":""}${isAndroid?" android":""}`} dir={rtl?"rtl":"ltr"}>
     <nav className="newNav" aria-label={rtl?"التنقل الرئيسي":"Primary navigation"}>
-      <button className="langSwitch headerLang" onClick={()=>setLang(rtl?"en":"ar")} aria-label={rtl?"Switch to English":"التبديل للعربية"}>{rtl?"EN":"ع"}</button>
+      <button type="button" className="langSwitch headerLang" onClick={toggleLanguage} aria-label={rtl?"Switch to English":"التبديل للعربية"}>{rtl?"EN":"ع"}</button>
       <div className="navActions"><button className={menuOpen?"menuButton open":"menuButton"} onClick={()=>setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="portfolio-menu" aria-label={rtl?"فتح قائمة الموقع":"Open site menu"}><i/><i/></button></div>
       <div className={menuOpen?"navMenu open":"navMenu"} id="portfolio-menu"><div>{t.nav.map(([href,label],i)=><a key={href} href={href} onClick={()=>setMenuOpen(false)}><small>0{i+1}</small><span>{label}</span><b>↗</b></a>)}</div><a className="menuWhatsapp" href={whatsappUrl} target="_blank" rel="noreferrer" onClick={()=>setMenuOpen(false)}>{t.contact}<span>↗</span></a></div>
       {menuOpen ? <button className="menuScrim" aria-label={rtl?"إغلاق القائمة":"Close menu"} onClick={()=>setMenuOpen(false)}/> : null}

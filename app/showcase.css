@@ -730,3 +730,45 @@
   .axesVideoGrid>a.axesVideoCard{grid-column:auto;width:auto;margin:0;border-bottom:1px solid var(--line);font-size:inherit}
   .heroBackdrop img{object-position:43% center}
 }
+
+/* Release 41 — Android parity.
+   Keep one explicit mobile motion rule at the end of the cascade. Earlier
+   mobile fallbacks intentionally disable expensive effects for Safari; this
+   restores the lighter moving reel wall everywhere, and the full page-turn
+   only for Android Chrome where it is stable. */
+.rtl .navMenu{direction:rtl;text-align:right}
+.rtl .navMenu>div>a{grid-template-columns:auto 1fr 42px}
+.rtl .navMenu b{grid-column:1;grid-row:1}
+.rtl .navMenu small{grid-column:3;grid-row:1}
+.rtl .navMenu>div span{grid-column:2;grid-row:1}
+
+@media(max-width:800px) and (prefers-reduced-motion:no-preference){
+  .motionViewport,.motionViewport.row-1,.motionViewport.row-2,.motionViewport.row-3{
+    width:104%;
+    margin-left:-2%;
+    padding:0;
+    overflow:hidden;
+    scroll-snap-type:none;
+    touch-action:pan-y;
+  }
+  .motionTrack{
+    animation:proofMarqueeMobile 52s linear infinite!important;
+    transform:translate3d(0,0,0)!important;
+    will-change:transform;
+  }
+  .row-2 .motionTrack{animation-direction:reverse!important;animation-duration:57s!important}
+  .row-3 .motionTrack{animation-duration:54s!important}
+  .motionGroup[aria-hidden="true"]{display:flex}
+}
+
+@media(max-width:800px) and (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    .site.android .cinematicHero{
+      animation:bookPageTurn linear both!important;
+      animation-timeline:view(block)!important;
+      animation-range:exit 0% exit 92%!important;
+      transform-origin:center bottom;
+      will-change:transform,filter,opacity;
+    }
+  }
+}
