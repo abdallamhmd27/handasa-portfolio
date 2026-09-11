@@ -511,6 +511,46 @@
   .ebtkaratLink{width:100%}
 }
 
+/* Emanly — organic storytelling for a handmade brand. */
+.emanlyCase{
+  --emanly-ink:#25170d;
+  --emanly-amber:#c18a3f;
+  --emanly-paper:#f8f0df;
+  position:relative;
+  z-index:8;
+  margin-top:-30px;
+  padding:110px 4.2vw 120px;
+  overflow:hidden;
+  color:var(--emanly-ink);
+  background:radial-gradient(circle at 85% 11%,rgba(244,202,120,.32),transparent 22%),var(--emanly-paper);
+  border-top:7px solid var(--emanly-amber);
+  border-radius:var(--radius-xl) var(--radius-xl) 0 0;
+  box-shadow:0 -26px 65px rgba(71,43,11,.16);
+}
+.emanlyIntro{display:grid;grid-template-columns:1.55fr .55fr;gap:7vw;align-items:end;margin:60px 0 72px}
+.emanlyIntro p,.emanlyStory small,.emanlyRole small{margin:0 0 28px;color:#98651e;font-size:9px;letter-spacing:.16em}
+.emanlyIntro h2{max-width:1050px;margin:0;font-family:Georgia,serif;font-size:clamp(55px,7.3vw,110px);font-weight:400;line-height:.88;letter-spacing:-.065em}
+.emanlyIntro>span{padding-bottom:10px;font-size:9px;letter-spacing:.14em;color:#6c5c49}
+.emanlyMetrics{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid rgba(71,43,11,.2);border-radius:var(--radius-lg);overflow:hidden;background:rgba(255,250,240,.58)}
+.emanlyMetrics article{min-height:210px;padding:28px;border-right:1px solid rgba(71,43,11,.2);display:flex;flex-direction:column;justify-content:space-between}
+.emanlyMetrics article:last-child{border-right:0}.rtl .emanlyMetrics article:last-child{border-right:1px solid rgba(71,43,11,.2)}.rtl .emanlyMetrics article:first-child{border-right:0}
+.emanlyMetrics b{font-family:Georgia,serif;font-size:clamp(58px,6vw,90px);font-weight:400;line-height:.85;letter-spacing:-.07em}.emanlyMetrics span{max-width:190px;font-size:9px;letter-spacing:.13em;line-height:1.5}
+.emanlyMetrics .financialMetric{background:var(--money-green)!important;color:#fff}.emanlyMetrics .moneyMark{position:static;align-self:flex-end}
+.emanlyStory{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:90px}.emanlyStory article{min-height:405px;padding:34px;border-radius:var(--radius-lg);border:1px solid rgba(71,43,11,.22);display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,253,248,.48)}
+.emanlyStory h3{max-width:360px;margin:35px 0 26px;font-family:Georgia,serif;font-size:clamp(27px,2.65vw,42px);font-weight:400;line-height:.97;letter-spacing:-.05em}.emanlyStory p{margin:0;font-size:13px;line-height:1.8;color:#564738}.emanlyStoryAccent{background:var(--emanly-ink)!important;color:#fff}.emanlyStoryAccent p{color:#eadcc6}.emanlyStoryAccent small{color:#efc170}
+.emanlyReels{margin-top:90px}.emanlySectionHead{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:20px;padding-bottom:18px;border-bottom:1px solid rgba(71,43,11,.3)}.emanlySectionHead p{margin:0;font-family:Georgia,serif;font-size:clamp(26px,3vw,44px);font-style:italic}.emanlySectionHead span{font-size:8px;letter-spacing:.13em;color:#6c5c49;text-align:right}
+.emanlyReelGrid{display:grid;grid-template-columns:1.8fr repeat(3,1fr);gap:12px}.emanlyViral,.emanlyTextReel{position:relative;min-height:370px;overflow:hidden;border-radius:var(--radius-lg);isolation:isolate}.emanlyViral{display:block;background:#2c1a0a;color:#fff}.emanlyViral img{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}.emanlyViral:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 28%,rgba(29,16,5,.92) 100%)}.emanlyViral>div{position:absolute;left:25px;right:25px;bottom:24px;display:flex;flex-direction:column;align-items:flex-start}.emanlyViral small,.emanlyTextReel small{font-size:8px;letter-spacing:.16em}.emanlyViral b{margin-top:7px;font-family:Georgia,serif;font-size:74px;font-weight:400;line-height:.85;letter-spacing:-.07em}.emanlyViral span,.emanlyTextReel span{margin-top:13px;font-size:8px;letter-spacing:.13em}.emanlyTextReel{padding:22px;display:flex;flex-direction:column;justify-content:space-between;background:#e0b05d;color:var(--emanly-ink);transition:transform .25s,box-shadow .25s}.emanlyTextReel:nth-child(3){background:#593d1e;color:#fff}.emanlyTextReel:nth-child(4){background:#f3d89b}.emanlyTextReel:hover{transform:translateY(-5px);box-shadow:0 20px 36px rgba(71,43,11,.18)}.emanlyTextReel b{white-space:pre-line;font-family:Georgia,serif;font-size:clamp(28px,3vw,42px);font-weight:400;line-height:.93;letter-spacing:-.06em}
+.emanlyRole{display:grid;grid-template-columns:.45fr 1.4fr auto;gap:5vw;align-items:center;margin-top:70px;padding:28px 30px;border-top:1px solid var(--emanly-ink);border-bottom:1px solid var(--emanly-ink)}.emanlyRole small{margin:0}.emanlyRole p{margin:0;font-size:10px;letter-spacing:.13em;line-height:1.65}.emanlyRole a{min-width:260px;padding:15px 18px;border-radius:999px;display:flex;align-items:center;justify-content:space-between;background:var(--emanly-ink);color:#fff;font-size:8px;letter-spacing:.1em}
+
+@media(max-width:800px){
+  .emanlyCase{margin-top:-20px;padding:80px 5vw 90px}
+  .emanlyIntro{display:block;margin:45px 0}.emanlyIntro h2{font-size:clamp(46px,12.5vw,64px);line-height:.91}.emanlyIntro>span{display:block;margin-top:24px}
+  .emanlyMetrics{grid-template-columns:1fr 1fr}.emanlyMetrics article{min-height:160px;padding:20px}.emanlyMetrics article:nth-child(2){border-right:0}.rtl .emanlyMetrics article:first-child{border-right:1px solid rgba(71,43,11,.2)}.rtl .emanlyMetrics article:nth-child(2){border-right:0}.emanlyMetrics article:last-child{grid-column:1/-1;border-top:1px solid rgba(71,43,11,.2);border-right:0}.emanlyMetrics b{font-size:52px}
+  .emanlyStory{grid-template-columns:1fr;gap:9px;margin-top:60px}.emanlyStory article{min-height:auto;padding:28px}.emanlyStory h3{margin:32px 0 22px;font-size:29px}
+  .emanlyReels{margin-top:60px}.emanlySectionHead{display:block}.emanlySectionHead span{display:block;margin-top:12px;text-align:left;line-height:1.6}.rtl .emanlySectionHead span{text-align:right}.emanlyReelGrid{grid-template-columns:1fr 1fr;gap:8px}.emanlyViral{grid-column:1/-1;min-height:470px}.emanlyTextReel{min-height:210px;padding:16px}.emanlyTextReel b{font-size:29px}.emanlyViral>div{left:20px;right:20px;bottom:20px}
+  .emanlyRole{grid-template-columns:1fr;gap:18px;margin-top:55px;padding:24px 0}.emanlyRole a{min-width:0;width:100%}
+}
+
 /* Tallah Dental — an honest origin story rather than a performance case. */
 .tallahCase{
   --clinic:#b9cdd4;

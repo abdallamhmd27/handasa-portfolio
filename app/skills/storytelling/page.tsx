@@ -6,19 +6,19 @@ import "../skills.css";
 type Lang = "en" | "ar";
 
 const stories = [
-  { metric: "2.8M", image: null, platform: "TIKTOK", href: "https://www.tiktok.com/@emanly_handmade/video/7541127528451198216", en: "Product-led story", ar: "قصة تقود للمنتج" },
+  { metric: "2.4M", image: "/storytelling/emanly-viral-2-4m.png", platform: "TIKTOK", href: "https://www.tiktok.com/@emanly_handmade/video/7541127528451198216", en: "Product-led story", ar: "قصة تقود للمنتج" },
   { metric: "2M", image: "/mariem/reel-2m-new.jpg", platform: "FACEBOOK", href: "https://www.facebook.com/reel/852477507840942/", en: "Open-loop story", ar: "قصة بسؤال مفتوح" },
   { metric: "149K", image: "/mariem/reel-149k.jpg", platform: "FACEBOOK", href: "https://www.facebook.com/reel/4373980182748647", en: "Offer inside a story", ar: "عرض داخل حكاية" },
   { metric: "50K", image: "/rabha/reel-47k.jpg", platform: "FACEBOOK", href: "https://www.facebook.com/reel/2252826048836354/", en: "Problem-led story", ar: "قصة تبدأ من مشكلة" },
   { metric: "13K", image: "/rabha/reel-13k.jpg", platform: "FACEBOOK", href: "https://www.facebook.com/reel/1487970329748086", en: "Trust-building story", ar: "قصة تبني الثقة" },
-  { metric: "12.8K", image: null, platform: "TIKTOK", href: "https://www.tiktok.com/@emanly_handmade/video/7551852420775644436", en: "Value-before-offer story", ar: "القيمة قبل العرض" },
+  { metric: "TIKTOK", image: null, platform: "TIKTOK", href: "https://www.tiktok.com/@emanly_handmade/video/7543716584968178962", en: "Handmade product story", ar: "قصة منتج هاند ميد" },
 ];
 
 const copy = {
   en: {
     nav: [["/", "Home"], ["/#proof-wall", "Projects"], ["/skills", "Skills"], ["/#about", "About"]],
     contact: "Let’s talk", eyebrow: "SKILL 01 / STORYTELLING", titleA: "Writing that", titleB: "makes people stay.",
-    intro: "Six scripts. Different products, audiences, and goals. The common factor was a story structure built to earn the next second.",
+    intro: "Stories across different products, audiences, and goals. The common factor was a structure built to earn the next second.",
     proof: "DOCUMENTED VIEWS", evidence: "THE EVIDENCE", evidenceTitle: "The result is visible before the brand name.",
     roleK: "WHAT IS MINE", role: "Across every example shown: the original concept, story angle, structure, script, and execution direction are my work. The shooting and editing were executed by the teams—I do not claim them.",
     sequence: ["Tension", "Open loop", "Human detail", "Payoff"], views: "VIEWS", current: "Figures are the latest visible counts or the figures documented in the case studies.",
@@ -29,7 +29,7 @@ const copy = {
   ar: {
     nav: [["/", "الرئيسية"], ["/#proof-wall", "المشاريع"], ["/skills", "المهارات"], ["/#about", "عنّي"]],
     contact: "تواصل معي", eyebrow: "المهارة 01 / السرد القصصي", titleA: "كتابة تخلي", titleB: "الناس تكمّل.",
-    intro: "ستة سكريبتات، منتجات وجماهير وأهداف مختلفة. العامل المشترك: بناء قصصي يكسب الثانية اللي بعدها.",
+    intro: "حكايات لمنتجات وجماهير وأهداف مختلفة. العامل المشترك: بناء قصصي يكسب الثانية اللي بعدها.",
     proof: "مشاهدة موثقة", evidence: "الدليل", evidenceTitle: "النتيجة باينة قبل حتى ما تعرف اسم البراند.",
     roleK: "إيه اللي أنا عملته؟", role: "في كل الأمثلة: الفكرة الأصلية، زاوية الحكاية، بناء القصة، كتابة السكريبت، وتوجيه التنفيذ من شغلي. التصوير والمونتاج نفذهم فريق العمل—وأنا لا أنسبهم لنفسي.",
     sequence: ["التوتر", "السؤال المفتوح", "التفصيلة الإنسانية", "النهاية"], views: "مشاهدة", current: "الأرقام هي آخر أرقام ظاهرة أو الأرقام الموثقة داخل دراسات الحالة.",

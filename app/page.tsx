@@ -211,6 +211,25 @@ export default function Home(){
       <p className="ebtkaratNote">{rtl?"هذه النماذج تُعرض لإثبات دوري في كتابة المحتوى فقط. التصميم والتنفيذ البصري تمّا بواسطة فريق ابتكارات.":"These samples are shown as evidence of my Content Writing role only. Visual design and execution belonged to the Ebtkarat team."}</p>
       <a className="ebtkaratLink" href="https://www.instagram.com/ebt.sa/" target="_blank" rel="noreferrer">{rtl?"شاهد ابتكارات على إنستجرام":"VIEW EBTKRAT ON INSTAGRAM"}<span>↗</span></a>
     </section>
+    <section className="emanlyCase" id="emanly-case">
+      <div className="sectionIndex">08 / ORGANIC STORYTELLING</div>
+      <div className="emanlyIntro"><div><p>{rtl?"إيمانلي · براند هاند ميد · مصر":"EMANLY · HANDMADE BRAND · EGYPT"}</p><h2>{rtl?"من براند غير ظاهر إلى حكاية وصلت لملايين الناس.":"From an unseen handmade brand to a story seen by millions."}</h2></div><span>{rtl?"فريلانس · بدون أي ميزانية إعلانات":"FREELANCE · ZERO AD SPEND"}</span></div>
+      <div className="emanlyMetrics">
+        <article><b>2.4M</b><span>{rtl?"مشاهدة لأقوى فيديو":"VIEWS ON THE VIRAL VIDEO"}</span></article>
+        <article className="financialMetric"><i className="moneyMark">$</i><b>11K</b><span>{rtl?"جنيه مبيعات من الفيديو الفيرال":"EGP SALES FROM THE VIRAL VIDEO"}</span></article>
+        <article><b>0</b><span>{rtl?"جنيه إنفاق إعلاني":"EGP AD SPEND"}</span></article>
+      </div>
+      <div className="emanlyStory">
+        <article><small>01 / {rtl?"التحدي":"THE CHALLENGE"}</small><h3>{rtl?"منتج يدوي جميل، لكن بدون مساحة ظهور حقيقية.":"A beautiful handmade product without real visibility."}</h3><p>{rtl?"إيمانلي كانت براند صغير يعمل هاند ميد، بدون ميزانية لإعلانات المحتوى. المطلوب لم يكن مجرد نشر فيديوهات، بل اكتشاف ما يجعل الناس تتوقف وتكمل الحكاية.":"Emanly was a small handmade brand with no budget for content ads. The task was not simply publishing reels—it was finding what would make people stop and finish the story."}</p></article>
+        <article className="emanlyStoryAccent"><small>02 / {rtl?"الطريقة":"THE ROUTE"}</small><h3>{rtl?"بحث في المحتوى الفيرال، ثم تطبيق سرد قصصي يناسب المنتج.":"Viral-content research, then storytelling built around the product."}</h3><p>{rtl?"درست المحتوى الذي حقق انتشارًا على إنستجرام وتيك توك، ثم طبقت أسلوب الـStorytelling على المنتج اليدوي: فكرة تمسك الانتباه، وتسلسل يجعل المشاهد يريد رؤية النهاية.":"I researched the content that travelled on Instagram and TikTok, then applied a storytelling approach to handmade products: an opening that earns attention and a sequence that makes the viewer want the ending."}</p></article>
+        <article><small>03 / {rtl?"النتيجة":"THE RESULT"}</small><h3>{rtl?"انتشار وصل للخليج وطلبات ملأت الطاقة الاستيعابية.":"Reach extended to the Gulf—and orders filled capacity."}</h3><p>{rtl?"الفيديو الفيرال وصل إلى 2.4 مليون مشاهدة وحقق وقتها طلبات بقيمة 11 ألف جنيه. ومع انتشار الفيديوهات، جاء طلب من الخليج ووصلت الطلبات لمرحلة أغلقت فيها البراند طاقتها الاستيعابية.":"The viral video reached 2.4M views and generated EGP 11K in orders at the time. As the videos spread, Gulf orders came in and demand reached the point where the brand’s capacity filled."}</p></article>
+      </div>
+      <div className="emanlyReels"><div className="emanlySectionHead"><p>{rtl?"الحكايات التي أثبتت الفكرة":"STORIES THAT PROVED THE IDEA"}</p><span>{rtl?"اضغط على أي بطاقة لمشاهدة الفيديو":"SELECT A CARD TO WATCH ON TIKTOK"}</span></div><div className="emanlyReelGrid">
+        <a className="emanlyViral" href="https://www.tiktok.com/@emanly_handmade/video/7541127528451198216" target="_blank" rel="noreferrer"><img src="/storytelling/emanly-viral-2-4m.png" alt={rtl?"فيديو إيمانلي الفيرال الذي حقق 2.4 مليون مشاهدة":"Emanly viral TikTok video with 2.4M views"}/><div><small>01 / TIKTOK</small><b>2.4M</b><span>{rtl?"مشاهدة · اضغط لمشاهدة الفيديو":"VIEWS · WATCH THE VIDEO"} ↗</span></div></a>
+        {["7543716584968178962","7542946066740694279","7542203782671666439"].map((id,i)=><a className="emanlyTextReel" href={`https://www.tiktok.com/@emanly_handmade/video/${id}`} target="_blank" rel="noreferrer" key={id}><small>0{i+2} / TIKTOK</small><b>{rtl?"قصة منتج\nهاند ميد":"HANDMADE\nPRODUCT STORY"}</b><span>{rtl?"شاهد الفيديو":"WATCH VIDEO"} ↗</span></a>)}
+      </div></div>
+      <div className="emanlyRole"><small>{rtl?"دوري":"MY ROLE"}</small><p>{rtl?"بحث المحتوى · الفكرة · الـStorytelling · كتابة المحتوى":"CONTENT RESEARCH · CONCEPT · STORYTELLING · CONTENT WRITING"}</p><a href="https://www.instagram.com/emanly.handmade/" target="_blank" rel="noreferrer">{rtl?"شاهد صفحة إيمانلي على إنستجرام":"VIEW EMANLY ON INSTAGRAM"}<span>↗</span></a></div>
+    </section>
     <section className="tallahCase" id="tallah-case">
       <div className="sectionIndex">ORIGIN STORY / TALLAH DENTAL</div>
       <div className="tallahHero">
