@@ -5,7 +5,7 @@ import "../skills.css";
 
 type Lang = "en" | "ar";
 
-const visuals = Array.from({ length: 26 }, (_, index) => `/ai-visual/visual-${String(index + 1).padStart(2, "0")}.jpg`);
+const visuals = Array.from({ length: 32 }, (_, index) => `/ai-visual/visual-${String(index + 1).padStart(2, "0")}.jpg`);
 
 const copy = {
   en: {
