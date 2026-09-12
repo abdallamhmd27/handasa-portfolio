@@ -5,7 +5,7 @@ import "../skills.css";
 
 type Lang = "en" | "ar";
 
-const visuals = Array.from({ length: 32 }, (_, index) => `/ai-visual/visual-${String(index + 1).padStart(2, "0")}.jpg`);
+const visuals = Array.from({ length: 53 }, (_, index) => `/ai-visual/visual-${String(index + 1).padStart(2, "0")}.jpg`);
 
 const copy = {
   en: {
@@ -45,6 +45,9 @@ export default function AiVisualProduction() {
     </nav>
 
     <section className="aiVisualGrid" aria-label={rtl ? "معرض إنتاج الصور بالذكاء الاصطناعي" : "AI visual production gallery"}>
+      <article className="aiVisualTile aiVisualMotion" aria-label={rtl ? "نموذج فيديو لإنتاج بصري بالذكاء الاصطناعي" : "AI visual production motion sample"}>
+        <video src="/ai-visual/motion-01.mp4" autoPlay muted loop playsInline controls />
+      </article>
       {visuals.map((src, index) => <button className={`aiVisualTile tile-${index + 1}`} type="button" onClick={() => setSelected(src)} key={src} aria-label={`${t.open} ${index + 1}`}>
         <img src={src} alt={rtl ? `مثال إنتاج بصري بالذكاء الاصطناعي ${index + 1}` : `AI visual production sample ${index + 1}`} loading={index < 6 ? "eager" : "lazy"} />
       </button>)}
