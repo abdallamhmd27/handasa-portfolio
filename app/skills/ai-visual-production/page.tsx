@@ -5,7 +5,9 @@ import "../skills.css";
 
 type Lang = "en" | "ar";
 
-const visuals = Array.from({ length: 53 }, (_, index) => `/ai-visual/visual-${String(index + 1).padStart(2, "0")}.jpg`);
+const visuals = Array.from({ length: 53 }, (_, index) => index + 1)
+  .filter((id) => ![2, 3, 4, 5].includes(id))
+  .map((id) => ({ id, src: `/ai-visual/visual-${String(id).padStart(2, "0")}.jpg` }));
 
 const copy = {
   en: {
@@ -48,8 +50,8 @@ export default function AiVisualProduction() {
       <article className="aiVisualTile aiVisualMotion" aria-label={rtl ? "نموذج فيديو لإنتاج بصري بالذكاء الاصطناعي" : "AI visual production motion sample"}>
         <video src="/ai-visual/motion-01.mp4" autoPlay muted loop playsInline controls />
       </article>
-      {visuals.map((src, index) => <button className={`aiVisualTile tile-${index + 1}`} type="button" onClick={() => setSelected(src)} key={src} aria-label={`${t.open} ${index + 1}`}>
-        <img src={src} alt={rtl ? `مثال إنتاج بصري بالذكاء الاصطناعي ${index + 1}` : `AI visual production sample ${index + 1}`} loading={index < 6 ? "eager" : "lazy"} />
+      {visuals.map(({ id, src }, index) => <button className={`aiVisualTile tile-${id}`} type="button" onClick={() => setSelected(src)} key={src} aria-label={`${t.open} ${id}`}>
+        <img src={src} alt={rtl ? `مثال إنتاج بصري بالذكاء الاصطناعي ${id}` : `AI visual production sample ${id}`} loading={index < 6 ? "eager" : "lazy"} />
       </button>)}
     </section>
 
