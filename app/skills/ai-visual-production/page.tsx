@@ -6,7 +6,7 @@ import "../skills.css";
 type Lang = "en" | "ar";
 
 const visuals = Array.from({ length: 53 }, (_, index) => index + 1)
-  .filter((id) => ![2, 3, 4, 5, 6].includes(id))
+  .filter((id) => ![2, 3, 4, 5, 6, 52].includes(id))
   .map((id) => ({ id, src: `/ai-visual/visual-${String(id).padStart(2, "0")}.jpg` }));
 
 const copy = {
