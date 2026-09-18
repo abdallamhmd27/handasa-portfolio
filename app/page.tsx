@@ -101,11 +101,11 @@ const ebtkaratDarkAds = [
 const ebtkaratDarkAdsUrl="https://drive.google.com/drive/folders/16vXu45qimcXV2mat3NCdcWUbn5go0Wwk";
 
 const talaaReels = [
-  {id:"DUqsnqXjM3s", label:"The starting point", ar:"نقطة البداية", image:"https://www.instagram.com/p/DUqsnqXjM3s/media/?size=l"},
-  {id:"DU8gZMvDCrP", label:"Ramadan system", ar:"سلسلة رمضان", image:"https://www.instagram.com/p/DU8gZMvDCrP/media/?size=l"},
+  {id:"DUqsnqXjM3s", label:"The starting point", ar:"نقطة البداية", image:"/proof/DUqsnqXjM3s.jpg"},
+  {id:"DU8gZMvDCrP", label:"Ramadan system", ar:"سلسلة رمضان", image:"/proof/DU8gZMvDCrP.jpg"},
   {id:"DWR6Mb7sDgU", label:"The third direction begins", ar:"بداية الديركشن الثالث", image:"/proof/DWR6Mb7sDgU.jpg"},
-  {id:"DZf22pwMcfX", label:"The new language works", ar:"اللغة الجديدة بدأت تشتغل", image:"https://www.instagram.com/p/DZf22pwMcfX/media/?size=l"},
-  {id:"Dcg61JzInAV", label:"A repeatable format", ar:"فورمات قابل للتكرار", image:"https://www.instagram.com/p/Dcg61JzInAV/media/?size=l"},
+  {id:"DZf22pwMcfX", label:"The new language works", ar:"اللغة الجديدة بدأت تشتغل", image:"/proof/DZf22pwMcfX.jpg"},
+  {id:"Dcg61JzInAV", label:"A repeatable format", ar:"فورمات قابل للتكرار", image:"/proof/Dcg61JzInAV.jpg"},
 ];
 
 export default function Home(){
