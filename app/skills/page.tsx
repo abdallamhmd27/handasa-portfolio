@@ -9,7 +9,6 @@ const hubCopy = {
   en: {
     nav: [["/", "Home"], ["/#proof-wall", "Projects"], ["/skills", "Skills"], ["/#about", "About"]],
     contact: "Let’s talk", eyebrow: "THE SKILL LIBRARY", titleA: "Choose the skill.", titleB: "See the proof.",
-    intro: "Not a list of things I say I can do. Each skill opens into the thinking, the work, and the evidence behind it.",
     explore: "OPEN SKILL", available: "EVIDENCE READY",
     skills: [
       ["01", "Storytelling", "Writing stories that hold attention and move people toward the next second.", "/skills/storytelling", "5M+"],
@@ -22,7 +21,6 @@ const hubCopy = {
   ar: {
     nav: [["/", "الرئيسية"], ["/#proof-wall", "المشاريع"], ["/skills", "المهارات"], ["/#about", "عنّي"]],
     contact: "تواصل معي", eyebrow: "مكتبة المهارات", titleA: "اختار المهارة.", titleB: "وشوف الدليل.",
-    intro: "مش قائمة بحاجات بقول إني بعرف أعملها. كل مهارة بتفتح على طريقة التفكير، الشغل، والدليل الحقيقي وراها.",
     explore: "افتح المهارة", available: "الدليل جاهز",
     skills: [
       ["01", "السرد القصصي", "كتابة حكايات تمسك الانتباه وتخلي المشاهد يكمل للثانية اللي بعدها.", "/skills/storytelling", "+5M"],
@@ -48,7 +46,7 @@ export default function SkillsHub() {
     <header className="hubHero">
       <p>{t.eyebrow}</p>
       <h1><span>{t.titleA}</span><strong>{t.titleB}</strong></h1>
-      <div className="hubIntro"><span>01 — 04</span><p>{t.intro}</p></div>
+      <div className="hubIntro"><span>01 — 04</span></div>
     </header>
     <section className="hubGrid">{t.skills.map(([number, title, description, href, mark], index) => {
       const content = <><div className="hubCardTop"><small>{number}</small><b>{index === 0 ? t.available : ""}</b></div><strong className="hubCardMark">{mark}</strong><div className="hubCardCopy"><h2>{title}</h2><p>{description}</p>{href && <span>{t.explore} ↗</span>}</div></>;
