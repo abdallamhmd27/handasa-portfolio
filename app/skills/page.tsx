@@ -12,7 +12,7 @@ const hubCopy = {
     explore: "OPEN SKILL", available: "EVIDENCE READY",
     skills: [
       ["01", "Storytelling", "Writing stories that hold attention and move people toward the next second.", "/skills/storytelling", "5M+"],
-      ["02", "Copywriting", "Sales angles, hooks, and performance copy built around a real decision.", "", "COPY"],
+      ["02", "Copywriting", "Sales angles, hooks, and performance copy built around a real decision.", "/skills/copywriting", "COPY"],
       ["03", "AI Visual Production", "Producing model and campaign visuals with AI-led creative workflows.", "/skills/ai-visual-production", "AI"],
       ["04", "Content Strategy & Action Plans", "Turning business goals into clear content systems, workflows, and executable plans.", "", "PLAN"],
     ],
@@ -24,7 +24,7 @@ const hubCopy = {
     explore: "افتح المهارة", available: "الدليل جاهز",
     skills: [
       ["01", "السرد القصصي", "كتابة حكايات تمسك الانتباه وتخلي المشاهد يكمل للثانية اللي بعدها.", "/skills/storytelling", "+5M"],
-      ["02", "الـCopywriting", "زوايا بيع وHooks وكتابة أداء مبنية على قرار حقيقي من العميل.", "", "COPY"],
+      ["02", "الـCopywriting", "زوايا بيع وHooks وكتابة أداء مبنية على قرار حقيقي من العميل.", "/skills/copywriting", "COPY"],
       ["03", "إنتاج الصور بالـAI", "إنتاج صور موديلز وكامبينز من خلال عمليات إبداعية تعتمد على الذكاء الاصطناعي.", "/skills/ai-visual-production", "AI"],
       ["04", "استراتيجيات وخطط تنفيذ المحتوى", "تحويل أهداف البيزنس لأنظمة محتوى وWorkflows وخطط قابلة للتنفيذ.", "", "PLAN"],
     ],
