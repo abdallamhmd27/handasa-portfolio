@@ -47,9 +47,6 @@ export default function AiVisualProduction() {
     </nav>
 
     <section className="aiVisualGrid" aria-label={rtl ? "معرض إنتاج الصور بالذكاء الاصطناعي" : "AI visual production gallery"}>
-      <article className="aiVisualTile aiVisualMotion" aria-label={rtl ? "نموذج فيديو لإنتاج بصري بالذكاء الاصطناعي" : "AI visual production motion sample"}>
-        <video src="/ai-visual/motion-01.mp4" autoPlay muted loop playsInline controls />
-      </article>
       {visuals.map(({ id, src }, index) => <button className={`aiVisualTile tile-${id}`} type="button" onClick={() => setSelected(src)} key={src} aria-label={`${t.open} ${id}`}>
         <img src={src} alt={rtl ? `مثال إنتاج بصري بالذكاء الاصطناعي ${id}` : `AI visual production sample ${id}`} loading={index < 6 ? "eager" : "lazy"} />
       </button>)}
