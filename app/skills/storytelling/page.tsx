@@ -1,9 +1,12 @@
 "use client";
+import Link from "next/link";
+import SkillsNav from "../../components/SkillsNav";
+import { usePortfolioLanguage } from "../../components/usePortfolioLanguage";
 
-import { useState } from "react";
+
 import "../skills.css";
 
-type Lang = "en" | "ar";
+
 
 const stories = [
   { metric: "2.4M", image: "/storytelling/emanly-viral-2-4m.png", platform: "TIKTOK", href: "https://www.tiktok.com/@emanly_handmade/video/7541127528451198216", en: "Product-led story", ar: "قصة تقود للمنتج" },
@@ -40,17 +43,13 @@ const copy = {
 };
 
 export default function StorytellingPage() {
-  const [lang, setLang] = useState<Lang>("en");
+  const [lang, setLang] = usePortfolioLanguage();
   const rtl = lang === "ar";
   const t = copy[lang];
   const whatsapp = `https://wa.me/201013454954?text=${encodeURIComponent(rtl ? "أهلًا عبدالله، شوفت صفحة المهارات وعايز أتكلم معاك بخصوص مشروع." : "Hi Abdallah, I saw your skills page and would like to discuss a project with you.")}`;
 
   return <main className={rtl ? "skillsPage rtl" : "skillsPage"} dir={rtl ? "rtl" : "ltr"}>
-    <nav className="skillsNav">
-      <span className="navSpacer" aria-hidden="true" />
-      <div className="skillsNavLinks">{t.nav.map(([href, label]) => <a className={href === "/skills" ? "active" : ""} href={href} key={href}>{label}</a>)}</div>
-      <div className="skillsActions"><button onClick={() => setLang(rtl ? "en" : "ar")}>{rtl ? "EN" : "ع"}</button><a href={whatsapp} target="_blank" rel="noreferrer">{t.contact}<span>↗</span></a></div>
-    </nav>
+    <SkillsNav rtl={rtl} setLang={setLang} nav={t.nav} contact={t.contact} whatsapp={whatsapp} />
 
     <header className="skillsHero">
       <div className="skillsHeroTop"><p>{t.eyebrow}</p><span>01 — 05</span></div>
@@ -82,6 +81,6 @@ export default function StorytellingPage() {
     </section>
 
     <section className="skillsCta"><small>{t.ctaK}</small><h2>{t.cta}</h2><a href={whatsapp} target="_blank" rel="noreferrer">{t.start}<span>↗</span></a></section>
-    <footer className="skillsFooter"><a href="/" className="skillsMark">HANDASA<span>®</span></a><p>{t.footer}</p><a href="/">{rtl ? "العودة للرئيسية" : "BACK HOME"} ↗</a></footer>
+    <footer className="skillsFooter"><Link href="/" className="skillsMark">HANDASA<span>®</span></Link><p>{t.footer}</p><Link href="/">{rtl ? "العودة للرئيسية" : "BACK HOME"} ↗</Link></footer>
   </main>;
 }

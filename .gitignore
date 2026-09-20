@@ -38,3 +38,7 @@ yarn-error.log*
 /.wrangler/
 /outputs/
 /work/
+
+# Generated local type-check artifacts
+/worker-configuration.d.ts
+*.tsbuildinfo

@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+import SkillsNav from "../../components/SkillsNav";
+import { usePortfolioLanguage } from "../../components/usePortfolioLanguage";
+
 import "../skills.css";
 import "./content-strategy.css";
 const plans = [
@@ -53,14 +55,10 @@ const copy = {
  ar:{nav:[["/","الرئيسية"],["/#proof-wall","المشاريع"],["/skills","المهارات"],["/#about","عنّي"]],contact:"تواصل معي",title:"استراتيجيات وخطط تنفيذ المحتوى",back:"المهارات",open:"افتح الشيت"}
 };
 export default function ContentStrategy(){
- const [lang,setLang]=useState<"en"|"ar">("en");
+ const [lang, setLang] = usePortfolioLanguage();
  const rtl=lang==="ar"; const t=copy[lang]; const whatsapp="https://wa.me/201013454954";
  return <main className={rtl?"skillsPage plansPage rtl":"skillsPage plansPage"} dir={rtl?"rtl":"ltr"}>
-    <nav className="skillsNav">
-      <a href="/" className="skillsMark">HANDASA<span>®</span></a>
-      <div className="skillsNavLinks">{t.nav.map(([href, label]) => <a className={href === "/skills" ? "active" : ""} href={href} key={href}>{label}</a>)}</div>
-      <div className="skillsActions"><button onClick={() => setLang(rtl ? "en" : "ar")}>{rtl ? "EN" : "ع"}</button><a href={whatsapp} target="_blank" rel="noreferrer">{t.contact}<span>↗</span></a></div>
-    </nav>
+    <SkillsNav rtl={rtl} setLang={setLang} nav={t.nav} contact={t.contact} whatsapp={whatsapp} />
  <header className="plansHeader"><a href="/skills">{t.back}</a><h1>{t.title}</h1></header>
  <section className="plansGrid" aria-label={t.title}>
  {plans.map((plan,index)=><a className={`planCard plan-${plan.key}`} key={plan.key} href={plan.href} target="_blank" rel="noreferrer" aria-label={`${t.open}: ${rtl?plan.ar:plan.en}`}>

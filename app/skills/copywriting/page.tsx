@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+import SkillsNav from "../../components/SkillsNav";
+import { usePortfolioLanguage } from "../../components/usePortfolioLanguage";
+
 import "../skills.css";
 import "./copywriting.css";
 
@@ -88,16 +90,12 @@ const copy = {
   ar: {nav: [["/", "الرئيسية"], ["/#proof-wall", "المشاريع"], ["/skills", "المهارات"], ["/#about", "عنّي"]], contact: "تواصل معي", title: "الـCopywriting", open: "شاهد الفيديو"},
 };
 export default function Copywriting() {
-  const [lang, setLang] = useState<"en" | "ar">("en");
+  const [lang, setLang] = usePortfolioLanguage();
   const rtl = lang === "ar";
   const t = copy[lang];
   const whatsapp = "https://wa.me/201013454954";
   return <main className={rtl ? "skillsPage copywritingPage rtl" : "skillsPage copywritingPage"} dir={rtl ? "rtl" : "ltr"}>
-    <nav className="skillsNav">
-      <a href="/" className="skillsMark">HANDASA<span>®</span></a>
-      <div className="skillsNavLinks">{t.nav.map(([href, label]) => <a className={href === "/skills" ? "active" : ""} href={href} key={href}>{label}</a>)}</div>
-      <div className="skillsActions"><button onClick={() => setLang(rtl ? "en" : "ar")}>{rtl ? "EN" : "ع"}</button><a href={whatsapp} target="_blank" rel="noreferrer">{t.contact}<span>↗</span></a></div>
-    </nav>
+    <SkillsNav rtl={rtl} setLang={setLang} nav={t.nav} contact={t.contact} whatsapp={whatsapp} />
     <header className="copywritingHeader"><a href="/skills">{rtl ? "المهارات" : "Skills"}</a><h1>{t.title}</h1></header>
     <section className="copywritingGrid" aria-label={rtl ? "نماذج الكوبي رايتنج" : "Copywriting samples"}>
       {samples.map((sample, index) => <article className="copywritingSample" key={`${sample.href}-${sample.image}`}>

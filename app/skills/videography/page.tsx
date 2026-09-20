@@ -1,5 +1,7 @@
 "use client";
-import { useState } from "react";
+import SkillsNav from "../../components/SkillsNav";
+import { usePortfolioLanguage } from "../../components/usePortfolioLanguage";
+
 import "../skills.css";
 import "./videography.css";
 const groups = [
@@ -136,13 +138,9 @@ const groups = [
 ];
 const copy={en:{nav:[["/","Home"],["/#proof-wall","Projects"],["/skills","Skills"],["/#about","About"]],contact:"Let’s talk",title:"Videography",role:"Filmed by me",open:"Watch video",back:"Skills"},ar:{nav:[["/","الرئيسية"],["/#proof-wall","المشاريع"],["/skills","المهارات"],["/#about","عنّي"]],contact:"تواصل معي",title:"التصوير",role:"من تصويري",open:"شاهد الفيديو",back:"المهارات"}};
 export default function Videography(){
- const [lang,setLang]=useState<"en"|"ar">("en");const rtl=lang==="ar";const t=copy[lang];const whatsapp="https://wa.me/201013454954";
+ const [lang, setLang] = usePortfolioLanguage();const rtl=lang==="ar";const t=copy[lang];const whatsapp="https://wa.me/201013454954";
  return <main className={rtl?"skillsPage filmingPage rtl":"skillsPage filmingPage"} dir={rtl?"rtl":"ltr"}>
-    <nav className="skillsNav">
-      <a href="/" className="skillsMark">HANDASA<span>®</span></a>
-      <div className="skillsNavLinks">{t.nav.map(([href, label]) => <a className={href === "/skills" ? "active" : ""} href={href} key={href}>{label}</a>)}</div>
-      <div className="skillsActions"><button onClick={() => setLang(rtl ? "en" : "ar")}>{rtl ? "EN" : "ع"}</button><a href={whatsapp} target="_blank" rel="noreferrer">{t.contact}<span>↗</span></a></div>
-    </nav>
+    <SkillsNav rtl={rtl} setLang={setLang} nav={t.nav} contact={t.contact} whatsapp={whatsapp} />
  <header className="filmingHeader"><a href="/skills">{t.back}</a><h1>{t.title}</h1><p>{t.role}</p></header>
  {groups.map(group=><section className="filmingGroup" key={group.en}><h2>{rtl?group.ar:group.en}</h2><div className="filmingGrid">{group.items.map((item,index)=><a href={item.href} target="_blank" rel="noreferrer" key={item.href} aria-label={`${t.open}: ${rtl?group.ar:group.en} ${index+1}`}><div className="filmingCover"><img src={item.image} alt={`${rtl?group.ar:group.en} — ${index+1}`} loading="lazy"/><span aria-hidden="true">↗</span></div><p><span>{t.role}</span><small>{String(index+1).padStart(2,"0")}</small></p></a>)}</div>{group.en === "CyberScale" && <a className="filmingAccount" href="https://www.instagram.com/cyberscale.agency/reels/" target="_blank" rel="noreferrer">{rtl?"كل فيديوهات سايبر اسكيل":"All CyberScale videos"} ↗</a>}</section>)}
  </main>;

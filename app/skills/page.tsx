@@ -1,9 +1,13 @@
 "use client";
+import Link from "next/link";
+import { usePortfolioMotion } from "../components/usePortfolioMotion";
+import SkillsNav from "../components/SkillsNav";
+import { usePortfolioLanguage } from "../components/usePortfolioLanguage";
 
-import { useState } from "react";
+
 import "./skills.css";
 
-type Lang = "en" | "ar";
+
 
 const hubCopy = {
   en: {
@@ -36,16 +40,13 @@ const hubCopy = {
 
 const skillImages: Record<string,string>={FILM:"/abdallah-hero.jpg","5M+":"/storytelling/emanly-viral-2-4m.png","+5M":"/storytelling/emanly-viral-2-4m.png",COPY:"/proof/DaI43gHx4Hw.jpg",AI:"/ai-visual/visual-01.jpg",PLAN:"/content-plans/stech-headers.png"};
 export default function SkillsHub() {
-  const [lang, setLang] = useState<Lang>("en");
+  usePortfolioMotion();
+  const [lang, setLang] = usePortfolioLanguage();
   const rtl = lang === "ar";
   const t = hubCopy[lang];
   const whatsapp = `https://wa.me/201013454954?text=${encodeURIComponent(rtl ? "أهلًا عبدالله، شوفت صفحة المهارات وعايز أتكلم معاك بخصوص مشروع." : "Hi Abdallah, I saw your skills page and would like to discuss a project with you.")}`;
   return <main className={rtl ? "skillsHub rtl" : "skillsHub"} dir={rtl ? "rtl" : "ltr"}>
-    <nav className="skillsNav hubNav">
-      <span className="navSpacer" aria-hidden="true" />
-      <div className="skillsNavLinks">{t.nav.map(([href, label]) => <a className={href === "/skills" ? "active" : ""} href={href} key={href}>{label}</a>)}</div>
-      <div className="skillsActions"><button onClick={() => setLang(rtl ? "en" : "ar")}>{rtl ? "EN" : "ع"}</button><a href={whatsapp} target="_blank" rel="noreferrer">{t.contact}<span>↗</span></a></div>
-    </nav>
+    <SkillsNav rtl={rtl} setLang={setLang} nav={t.nav} contact={t.contact} whatsapp={whatsapp} />
     <header className="hubHero">
       <p>{t.eyebrow}</p>
       <h1><span>{t.titleA}</span><strong>{t.titleB}</strong></h1>
@@ -55,6 +56,6 @@ export default function SkillsHub() {
       const content = <><img className={`hubThumbnail thumb-${mark === "PLAN" ? "plan" : "work"}`} src={skillImages[mark]} alt="" loading={index===0?"eager":"lazy"}/><div className="hubCardTop"><small>{number}</small><b>{index === 0 ? t.available : ""}</b></div><div className="hubCardCopy"><h2>{title}</h2><p>{description}</p>{href && <span>{t.explore} ↗</span>}</div></>;
       return href ? <a className={`hubCard imageSkill card-${index + 1}${mark === "FILM" ? " filmingSkill" : ""}`} href={href} key={number}>{content}</a> : <article className={`hubCard imageSkill card-${index + 1}${mark === "FILM" ? " filmingSkill" : ""}`} key={number}>{content}</article>;
     })}</section>
-    <footer className="skillsFooter"><a href="/" className="skillsMark">HANDASA<span>®</span></a><p>{t.footer}</p><a href="/">{rtl ? "العودة للرئيسية" : "BACK HOME"} ↗</a></footer>
+    <footer className="skillsFooter"><Link href="/" className="skillsMark">HANDASA<span>®</span></Link><p>{t.footer}</p><Link href="/">{rtl ? "العودة للرئيسية" : "BACK HOME"} ↗</Link></footer>
   </main>;
 }
