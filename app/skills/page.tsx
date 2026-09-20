@@ -15,6 +15,7 @@ const hubCopy = {
       ["02", "Copywriting", "Sales angles, hooks, and performance copy built around a real decision.", "/skills/copywriting", "COPY"],
       ["03", "AI Visual Production", "Producing model and campaign visuals with AI-led creative workflows.", "/skills/ai-visual-production", "AI"],
       ["04", "Content Strategy & Action Plans", "Turning business goals into clear content systems, workflows, and executable plans.", "/skills/content-strategy", "PLAN"],
+      ["05", "Videography", "Framing, lighting, and filming video content.", "", "FILM"],
     ],
     footer: "Abdallah Al-Mohandes — Cairo, Egypt",
   },
@@ -27,6 +28,7 @@ const hubCopy = {
       ["02", "الـCopywriting", "زوايا بيع وHooks وكتابة أداء مبنية على قرار حقيقي من العميل.", "/skills/copywriting", "COPY"],
       ["03", "إنتاج الصور بالـAI", "إنتاج صور موديلز وكامبينز من خلال عمليات إبداعية تعتمد على الذكاء الاصطناعي.", "/skills/ai-visual-production", "AI"],
       ["04", "استراتيجيات وخطط تنفيذ المحتوى", "تحويل أهداف البيزنس لأنظمة محتوى وWorkflows وخطط قابلة للتنفيذ.", "/skills/content-strategy", "PLAN"],
+      ["05", "التصوير", "اختيار الكادر، الإضاءة، وتصوير محتوى الفيديو.", "", "FILM"],
     ],
     footer: "عبدالله المهندس — القاهرة، مصر",
   },
@@ -46,7 +48,7 @@ export default function SkillsHub() {
     <header className="hubHero">
       <p>{t.eyebrow}</p>
       <h1><span>{t.titleA}</span><strong>{t.titleB}</strong></h1>
-      <div className="hubIntro"><span>01 — 04</span></div>
+      <div className="hubIntro"><span>01 — {String(t.skills.length).padStart(2, "0")}</span></div>
     </header>
     <section className="hubGrid">{t.skills.map(([number, title, description, href, mark], index) => {
       const content = <><div className="hubCardTop"><small>{number}</small><b>{index === 0 ? t.available : ""}</b></div><strong className="hubCardMark">{mark}</strong><div className="hubCardCopy"><h2>{title}</h2><p>{description}</p>{href && <span>{t.explore} ↗</span>}</div></>;
