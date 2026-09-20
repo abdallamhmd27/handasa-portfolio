@@ -132,18 +132,6 @@ const groups = [
         "image": "/proof/DaI43gHx4Hw.jpg"
       },
       {
-        "href": "https://www.instagram.com/cyberscale.agency/reel/DZzhMoHx-MU/",
-        "image": "/proof/DZzhMoHx-MU.jpg"
-      },
-      {
-        "href": "https://www.instagram.com/cyberscale.agency/reel/DZmgnKsxn9W/",
-        "image": "/proof/DZmgnKsxn9W.jpg"
-      },
-      {
-        "href": "https://www.instagram.com/cyberscale.agency/reel/DZfH27lxtCC/",
-        "image": "/proof/DZfH27lxtCC.jpg"
-      },
-      {
         "href": "https://www.instagram.com/cyberscale.agency/reel/DZQIxU6RzFN/",
         "image": "/proof/DZQIxU6RzFN.jpg"
       }
