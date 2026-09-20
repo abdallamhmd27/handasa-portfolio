@@ -130,10 +130,6 @@ const groups = [
       {
         "href": "https://www.instagram.com/cyberscale.agency/reel/DaI43gHx4Hw/",
         "image": "/proof/DaI43gHx4Hw.jpg"
-      },
-      {
-        "href": "https://www.instagram.com/cyberscale.agency/reel/DZQIxU6RzFN/",
-        "image": "/proof/DZQIxU6RzFN.jpg"
       }
     ]
   }
