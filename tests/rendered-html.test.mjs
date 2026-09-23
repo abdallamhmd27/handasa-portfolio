@@ -1,13 +1,14 @@
 import assert from "node:assert/strict";
 import { access } from "node:fs/promises";
 import test from "node:test";
-import worker from "../dist/server/index.js";
+const baseUrl = process.env.TEST_BASE_URL;
+const worker = baseUrl ? null : (await import("../dist/server/index.js")).default;
 
 const routes = ["/", "/skills", "/skills/videography", "/skills/storytelling", "/skills/copywriting", "/skills/content-strategy", "/skills/ai-visual-production"];
 const rendered = new Map();
 async function render(path) {
   if (!rendered.has(path)) {
-    const response = await worker.fetch(new Request(`http://localhost${path}`), {
+    const response = baseUrl ? await fetch(new URL(path, baseUrl)) : await worker.fetch(new Request(`http://localhost${path}`), {
       ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) },
     }, { waitUntil() {}, passThroughOnException() {} });
     assert.equal(response.status, 200, path);

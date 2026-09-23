@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./showcase.css";
 export const metadata: Metadata = {
-  metadataBase: new URL("https://creator-portfolio-ar.handasa180.chatgpt.site"),
+  metadataBase: new URL(process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "https://creator-portfolio-ar.handasa180.chatgpt.site"),
   title: "Abdallah Al-Mohandes — Creative & Content Strategist",
   description: "Creative and content strategy portfolio by Abdallah Al-Mohandes.",
   openGraph: { title: "Abdallah Al-Mohandes — Creative & Content Strategist", description: "Strategy behind content that moves.", images: [{ url: "/og.png", width: 1728, height: 909 }] },

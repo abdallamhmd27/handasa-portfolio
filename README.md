@@ -1,3 +1,26 @@
+# Handasa portfolio
+
+## Vercel deployment
+
+Import `abdallamhmd27/handasa-portfolio` in Vercel and select the `main` branch.
+The checked-in `vercel.json` selects Next.js, installs using the pnpm lockfile,
+and builds with `ppnpm run build:vercel`. Use Node.js 22.x or newer.
+No database, API keys, or private environment variables are needed for the portfolio.
+Vercel supplies the production domain used in social sharing metadata.
+
+Local Vercel-compatible checks:
+
+```sh
+ppnpm install --frozen-lockfile
+ppnpm run build:vercel
+ppnpm run start:vercel --port 3001
+TEST_BASE_URL=http://localhost:3001 node --test tests/rendered-html.test.mjs
+```
+
+The existing `dev`, `build`, and `start` scripts remain available for Sites/vinext.
+
+---
+
 # vinext-starter
 
 A clean full-stack starter running on
@@ -11,9 +34,9 @@ Drizzle support.
 ## Quick Start
 
 ```bash
-npm install
-npm run dev
-npm run build
+pnpm install
+pnpm run dev
+pnpm run build
 ```
 
 This starter does not use `wrangler.jsonc`.
@@ -89,10 +112,10 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 ## Useful Commands
 
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+- `pnpm run dev`: start local development
+- `pnpm run build`: verify the vinext build output
+- `pnpm test`: build the starter and verify all portfolio pages, navigation, and local image paths
+- `pnpm run db:generate`: generate Drizzle migrations after schema changes
 
 ## Learn More
 
