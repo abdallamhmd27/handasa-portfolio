@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import CaseBrand from "./components/CaseBrand";
 
 import { usePortfolioLanguage } from "./components/usePortfolioLanguage";
 import { usePortfolioMotion } from "./components/usePortfolioMotion";
@@ -133,6 +134,7 @@ export default function Home(){
     <div className="heroFlipStage"><section className="newHero cinematicHero" id="top"><figure className="heroBackdrop"><img src="/abdallah-hero.jpg" alt={rtl?"عبدالله المهندس أثناء العمل خلف الكاميرا":"Abdallah Al-Mohandes working behind the camera"}/></figure><div className="heroShade"/><div className="heroStatus"><span className="statusDot" />{t.available}</div><div className="heroIdentity"><p>{t.role}</p><h1><span>{rtl?"عبدالله":"ABDALLAH"}</span><strong>{rtl?"المهندس":"AL-MOHANDES"}</strong></h1><div><p>{t.intro}</p></div></div><div className="heroScroll"><span>01</span><p>{rtl?"انزل لتشوف حجم الشغل":"SCROLL TO SEE THE WORK"}</p></div></section></div>
     <section className="proofWall" id="proof-wall"><div className="proofWallHead" dir={rtl?"rtl":"ltr"}><span aria-hidden="true"/><h2>{rtl?<>أكتر من <b>200</b> قطعة محتوى.<br/>مع <b>30+</b> براند وعميل.</>:<><b>200+</b> short-form pieces.<br/><b>30+</b> brands &amp; clients.</>}</h2><p>{rtl?"نجاحات، تجارب، ودروس شكّلت الخطوة اللي بعدها.":"Wins, misses, tests—and the thinking behind the next move."}</p></div><div className="motionRows" dir="ltr">{proofRows.map((row,rowIndex)=><div className={`motionViewport row-${rowIndex+1}`} key={rowIndex}><div className="motionTrack">{[0,1].map(copy=><div className="motionGroup" aria-hidden={copy===1} key={copy}>{row.map((item,i)=><a href={item.href} target="_blank" rel="noreferrer" className="proofTile" key={`${copy}-${i}`} aria-label={item.alt} tabIndex={copy===1?-1:undefined}><img src={item.image} alt={copy===0?item.alt:""} loading="lazy" decoding="async"/><span>↗</span></a>)}</div>)}</div></div>)}</div><a className="proofWallCta" href="#talaa-case">{rtl?"استكشف تفاصيل المشاريع":"EXPLORE THE CASE STUDIES"}<span>↓</span></a></section>
     <section className="talaaCase" id="talaa-case">
+      <CaseBrand brand="talaa" rtl={rtl} />
       <div className="sectionIndex light">03 / FEATURED CASE STUDY</div>
       <div className="talaaIntro"><div><p>{rtl?"تعالى أفهمك · برنامج محتوى طبي":"TA’ALA AFHEMAK · MEDICAL CONTENT PROGRAM"}</p><h2>{rtl?"مش كل تطور شكله نجاح. أحيانًا بيكون خطوة عشان تعرف تغيّر الطريق.":"Not every improvement is the answer. Sometimes it teaches you to change the route."}</h2></div><span>{rtl?"28 فيديو في رمضان · بدون إعلانات":"28 RAMADAN REELS · ZERO AD SPEND"}</span></div>
       <div className="talaaOpening"><p>{rtl?"استلمت حسابًا طبيًا كان محتواه عاديًا وصورته ضعيفة: إضاءة ميتة، أداء بيعي أمام الكاميرا، مونتاج وإنسرتات غير مندمجة، وغياب شبه كامل للهوية. لم تكن المهمة تحسين فيديو؛ كانت إعادة تأهيل برنامج كامل ليصبح قريبًا، شابًا، ومفهومًا.":"I inherited a medical account with ordinary content and a weak on-screen presence: flat light, sales-like delivery, disconnected inserts and editing, and almost no identity. The job was not to improve a reel. It was to rebuild a whole program into something young, close, and easy to understand."}</p><aside><small>{rtl?"دوري":"MY ROLE"}</small><b>{rtl?"اتجاه · كتابة · تصوير · إضاءة · مونتاج · تدريب · نشر":"DIRECTION · WRITING · SHOOTING · LIGHTING · EDITING · COACHING · PUBLISHING"}</b></aside></div>
@@ -147,6 +149,7 @@ export default function Home(){
       <a className="talaaLink" href="https://www.instagram.com/talaa_afhemac/" target="_blank" rel="noreferrer">{rtl?"شاهد برنامج تعالى أفهمك على إنستجرام":"VIEW TA’ALA AFHEMAK ON INSTAGRAM"}<span>↗</span></a>
     </section>
     <section className="mariemCase" id="mariem-case">
+      <CaseBrand brand="mariem" rtl={rtl} />
       <div className="sectionIndex">04 / FEATURED CASE STUDY</div>
       <div className="mariemIntro"><div><p>{rtl?"مريم حجاب · براند أزياء نسائية":"MARIEM HIJAB · WOMEN’S FASHION BRAND"}</p><h2>{rtl?"قصة واحدة حققت هدف الشهر في أسبوعين.":"One story hit the monthly goal in two weeks."}</h2></div><span>{rtl?"4 شهور · محتوى أورجانيك وإعلاني":"4 MONTHS · ORGANIC & PAID CONTENT"}</span></div>
       <div className="mariemGrowth"><div><small>{rtl?"نقطة البداية":"START"}</small><b>174K</b><span>{rtl?"متابع تقريبًا":"APPROX. FOLLOWERS"}</span></div><i>→</i><div className="growthResult"><small>{rtl?"هدف الشهر":"MONTHLY GOAL"}</small><b>200K</b><span>{rtl?"تم الوصول إليه في الأسبوع الثاني":"REACHED IN WEEK TWO"}</span></div><article><b>2M</b><span>{rtl?"مشاهدة أورجانيك · بدون إعلانات":"ORGANIC VIEWS · NO PAID SUPPORT"}</span></article></div>
@@ -160,6 +163,7 @@ export default function Home(){
       <a className="mariemLink" href="https://www.facebook.com/profile.php?id=100078683716290&sk=reels_tab" target="_blank" rel="noreferrer">{rtl?"شاهد صفحة مريم حجاب":"VIEW MARIEM HIJAB ON FACEBOOK"}<span>↗</span></a>
     </section>
     <section className="ebtkaratCase" id="ebtkarat-case">
+      <CaseBrand brand="ebtkarat" rtl={rtl} />
       <div className="sectionIndex">05 / SELECTED CONTENT WRITING</div>
       <div className="ebtkaratIntro"><div><p>{rtl?"ابتكارات · استوديو تصميم داخلي · الرياض":"EBTKRAT · INTERIOR DESIGN STUDIO · RIYADH"}</p><h2>{rtl?"لما التصميم يكتمل، الكلمة تخليه يتعاش.":"When design is complete, language makes it lived."}</h2></div><span>{rtl?"4 شهور · Content Writing":"4 MONTHS · CONTENT WRITING"}</span></div>
       <div className="ebtkaratStatement"><p>{rtl?"ابتكارات كانت شركة مستقرة بهوية فاخرة وواضحة. دوري كان كتابة المحتوى: الـheadlines والكابتشن التي تضيف معنى للتصميم وتحافظ على هدوء وفخامة البراند.":"Ebtkarat was an established studio with a refined visual identity. My role was Content Writing: developing the headlines and captions that gave each design a point of view while protecting the brand’s quiet luxury."}</p><aside><small>{rtl?"المسمى":"POSITION"}</small><b>Content<br/>Writing</b></aside></div>
@@ -170,6 +174,7 @@ export default function Home(){
       <a className="ebtkaratLink" href="https://www.instagram.com/ebt.sa/" target="_blank" rel="noreferrer">{rtl?"شاهد ابتكارات على إنستجرام":"VIEW EBTKRAT ON INSTAGRAM"}<span>↗</span></a>
     </section>
     <section className="morehCase" id="moreh-case">
+      <CaseBrand brand="moreh" rtl={rtl} />
       <div className="sectionIndex light">06 / FEATURED CASE STUDY</div>
       <div className="morehIntro"><div><p>{rtl?"مريح · ملابس طبية":"MOREH · MEDICAL WEAR"}</p><h2>{rtl?"من طلب عاجل إلى عائد 11× خلال 10 أيام.":"From an urgent brief to 11× return in 10 days."}</h2></div><span>{rtl?"شهر واحد · كريتيفز DARK ADS":"ONE MONTH · DARK ADS CREATIVES"}</span></div>
       <div className="morehStats"><article className="financialMetric"><i className="moneyMark">$</i><b>77K</b><span>{rtl?"جنيه مبيعات":"EGP SALES"}</span></article><article className="financialMetric"><i className="moneyMark">$</i><b>7K</b><span>{rtl?"جنيه إنفاق إعلاني":"EGP AD SPEND"}</span></article><article className="morehAccent financialMetric"><i className="moneyMark">$</i><b>≈11×</b><span>{rtl?"عائد على الإنفاق":"RETURN ON AD SPEND"}</span></article><article><b>10</b><span>{rtl?"أيام للنتيجة":"DAYS TO RESULT"}</span></article></div>
@@ -190,6 +195,7 @@ export default function Home(){
       <a className="morehLink" href="https://www.instagram.com/morehmedwear/?hl=en" target="_blank" rel="noreferrer">{rtl?"شاهد مريح على إنستجرام":"VIEW MOREH ON INSTAGRAM"}<span>↗</span></a>
     </section>
     <section className="firstAxesCase" id="first-axes-case">
+      <CaseBrand brand="first-axes" rtl={rtl} />
       <div className="sectionIndex">07 / FEATURED CASE STUDY</div>
       <div className="firstAxesIntro"><div><p>{rtl?"فيرست أكسيس · تصميم واستشارات هندسية · السعودية":"FIRST AXES · ARCHITECTURE & ENGINEERING · SAUDI ARABIA"}</p><h2>{rtl?"من صفر تسويق إلى 400 ألف ريال مبيعات خدمات مقفولة.":"From zero marketing to SAR 400K in closed service sales."}</h2></div><span>{rtl?"أقل من 3 شهور عمل فعلي":"LESS THAN 3 MONTHS OF ACTIVE WORK"}</span></div>
       <div className="firstAxesStats">
@@ -213,6 +219,7 @@ export default function Home(){
       <a className="firstAxesLink" href="https://www.instagram.com/first.axes/" target="_blank" rel="noreferrer">{rtl?"شاهد First Axes على إنستجرام":"VIEW FIRST AXES ON INSTAGRAM"}<span>↗</span></a>
     </section>
     <section className="rabhaCase" id="rabha-case">
+      <CaseBrand brand="rabha" rtl={rtl} />
       <div className="sectionIndex light">08 / FEATURED CASE STUDY</div>
       <div className="rabhaIntro"><div><p>{rtl?"رابحة · مصنع عبايات للتجار والموزعين":"RABHA · B2B ABAYA MANUFACTURER"}</p><h2>{rtl?"من صفر متابع إلى مليون جنيه مبيعات.":"From zero followers to EGP 1M in sales."}</h2></div><span>{rtl?"شهران · بدون إعلانات ممولة":"TWO MONTHS · ZERO PAID ADS"}</span></div>
       <div className="rabhaStats"><article><b>41</b><span>{rtl?"فيديو خلال شهرين":"VIDEOS IN TWO MONTHS"}</span></article><article><b>47K</b><span>{rtl?"مشاهدة لأقوى فيديو":"TOP VIDEO VIEWS"}</span></article><article><b>2.2K</b><span>{rtl?"متابع من نقطة بداية صفر":"FOLLOWERS FROM ZERO"}</span></article><article className="wineStat financialMetric"><i className="moneyMark">$</i><b>1M</b><span>{rtl?"جنيه مبيعات في الشهر الثاني":"EGP SALES IN MONTH TWO"}</span></article></div>
@@ -226,6 +233,7 @@ export default function Home(){
       <a className="rabhaLink" href="https://www.facebook.com/people/Rabha/61588290807233/?sk=reels_tab" target="_blank" rel="noreferrer">{rtl?"شاهد الـ41 فيديو على فيسبوك":"VIEW ALL 41 VIDEOS ON FACEBOOK"}<span>↗</span></a>
     </section>
     <section className="emanlyCase" id="emanly-case">
+      <CaseBrand brand="emanly" rtl={rtl} />
       <div className="sectionIndex">09 / ORGANIC STORYTELLING</div>
       <div className="emanlyIntro"><div><p>{rtl?"إيمانلي · براند هاند ميد · مصر":"EMANLY · HANDMADE BRAND · EGYPT"}</p><h2>{rtl?"من براند غير ظاهر إلى حكاية وصلت لملايين الناس.":"From an unseen handmade brand to a story seen by millions."}</h2></div><span>{rtl?"فريلانس · بدون أي ميزانية إعلانات":"FREELANCE · ZERO AD SPEND"}</span></div>
       <div className="emanlyMetrics">
@@ -245,6 +253,7 @@ export default function Home(){
       <div className="emanlyRole"><small>{rtl?"دوري":"MY ROLE"}</small><p>{rtl?"بحث المحتوى · الفكرة · الـStorytelling · كتابة المحتوى":"CONTENT RESEARCH · CONCEPT · STORYTELLING · CONTENT WRITING"}</p><a href="https://www.instagram.com/emanly.handmade/" target="_blank" rel="noreferrer">{rtl?"شاهد صفحة إيمانلي على إنستجرام":"VIEW EMANLY ON INSTAGRAM"}<span>↗</span></a></div>
     </section>
     <section className="tallahCase" id="tallah-case">
+      <CaseBrand brand="tallah" rtl={rtl} />
       <div className="sectionIndex">ORIGIN STORY / TALLAH DENTAL</div>
       <div className="tallahHero">
         <div><small>{rtl?"أكثر من 6 شهور · بدأت من الصفر":"6+ MONTHS · STARTED FROM ZERO"}</small><h2>{rtl?"مش أكبر أرقامي. لكنها أكبر بداية ليا.":"Not my biggest numbers. My biggest beginning."}</h2></div>
